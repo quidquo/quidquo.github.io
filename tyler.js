@@ -1,5 +1,3 @@
-document.getElementById("blah").innerHTML = "New text!";
-
 var data = [
   {
     address_line_1: "Iowa Assn. of Business and Industry",
