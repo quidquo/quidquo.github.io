@@ -1,4 +1,4 @@
- $(H1).html("SDJKFJDFGKSDFJKASDJKFJKSDHJFAJSKD");
+document.getElementById("blah").innerHTML = "New text!";
 
 var data = [
   {
