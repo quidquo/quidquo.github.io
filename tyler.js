@@ -1,5 +1,3 @@
-$("#individual").html("<li>test</li>");
-
 var data = [
   {
     address_line_1: "Iowa Assn. of Business and Industry",
