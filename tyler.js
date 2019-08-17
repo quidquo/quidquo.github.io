@@ -1,4 +1,4 @@
-document.getElementById("change").innerHTML = "Works!";
+document.ready.getElementById("change").innerHTML = "Works!";
 
 var data = [
   {
