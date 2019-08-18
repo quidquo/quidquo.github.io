@@ -18,7 +18,7 @@ function oninputFunct(query) {
   
   //list those names under the input box
   committee.forEach(function(val){
-    if (val.candidate_name.toUpperCase().includes(x)){
+    if (val.candidate_name && val.candidate_name.toUpperCase().includes(x)){
     y.push(val.candidate_name.toUpperCase());
       z.push(val.committee_number);
   }
