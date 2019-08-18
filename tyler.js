@@ -1,8 +1,9 @@
 ///Retrieve Contribution data set and store it as an array of objects
 
-var external = $.getJSON("https://mydata.iowa.gov/id/smfg-ds7h.json", function(){
-
-});
+var xhReq = new XMLHttpRequest();
+xhReq.open("GET", "https://data.iowa.gov/resource/smfg-ds7h.json", false);
+xhReq.send(null);
+var external = JSON.parse(xhReq.responseText);
 console.log(external);
 
 //Retrieve committee list data set and store it as an array of objects. Placeholder data is here now.
