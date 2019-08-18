@@ -187,6 +187,8 @@ if(e.target && e.target.nodeName == "LI") {
   //clean up html search bar
   document.getElementById("myInput").value = candidateName;
   document.getElementById("oninput-box-output").innerHTML = "";
+  document.getElementById("individual").innerHTML = "";
+  document.getElementById("company").innerHTML = "";
   document.getElementById("graphHead").innerHTML = candidateName+" Campaign Finance Graph";
   graphMaker(candidateName, candidateCode);
   //propogate graph
@@ -317,7 +319,7 @@ console.log(individualTotals);
 console.log(companyTotals);
   //list top 5 companies
   var i;
-  for (i = 0; i < 4; i++) {
+  for (i = 0; i < 3; i++) {
     if (companyTotals[i]) {
       var compList = document.getElementById("company");
         var ent = document.createElement('li');
@@ -328,7 +330,7 @@ console.log(companyTotals);
 
   //list top 5 individual contributors
   var j;
-  for (j = 0; j < 4; j++) {
+  for (j = 0; j < 3; j++) {
     if (individualTotals[j]) {
       var indList = document.getElementById("individual");
         var entr = document.createElement('li');
