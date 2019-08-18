@@ -1,6 +1,6 @@
 //Retrieve committee list data set and store it as an array of objects. Placeholder data is here now.
 var xhReq = new XMLHttpRequest();
-xhReq.open("GET", "https://mydata.iowa.gov/resource/5dtu-swbk.json", false);
+xhReq.open("GET", "https://mydata.iowa.gov/resource/5dtu-swbk.json?$limit=5000", false);
 xhReq.send(null);
 var temp = JSON.parse(xhReq.responseText);
 console.log(temp);
