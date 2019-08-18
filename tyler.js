@@ -76,7 +76,7 @@ var data = JSON.parse(xhReq.responseText);
       val.contr_committee_cd === "9098"
     ) {
       partyContributions += parseFloat(val.amount);
-    } else if (val.contr_committee_cd) {
+    } else if (val.organization_nm) {
       //companies
       companyContributions += parseFloat(val.amount);
       //push to array for later use in company list
