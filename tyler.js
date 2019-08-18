@@ -283,17 +283,20 @@ function oninputFunct(query) {
   document.getElementById("oninput-box-output").innerHTML ="";
    var x = query.toUpperCase();
   var y = [];
+  var z = [];
   
   //list those names under the input box
   committee.forEach(function(val){
     if (val.candidate_name.toUpperCase().includes(x)){
     y.push(val.candidate_name.toUpperCase());
+      z.push(val.committee_number);
   }
   });
   var nameList = document.getElementById("oninput-box-output");
   y.forEach(function(ind){
     if(x.length> 0 && document.getElementById("oninput-box-output").childElementCount < 5){
       var entry = document.createElement('li');
+      entry.setAttribute("id", z[y.indexOf(ind)]);
     entry.appendChild(document.createTextNode(ind));
     nameList.appendChild(entry);
   }
@@ -302,11 +305,10 @@ function oninputFunct(query) {
 
 //select candidate when clicked
    var candidateName = "";
-  var candidateCode = 6160;
-
-
+    var candidateCode = 0;
    document.getElementById("oninput-box-output").addEventListener("click",function(e) {
 if(e.target && e.target.nodeName == "LI") {  
+  candidateCode = e.target.id;
           candidateName = e.target.textContent;
   document.getElementById("myInput").value = candidateName;
   document.getElementById("oninput-box-output").innerHTML = "";
@@ -314,9 +316,7 @@ if(e.target && e.target.nodeName == "LI") {
         }
     });
 
-//update candidate code
-
-
+    
   //filter the json file for just the selected candidate's data
   //var data = json.filter(function(val){
   //  return (val.committee_cd==candidateCode);
