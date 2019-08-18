@@ -271,6 +271,7 @@ var data = JSON.parse(xhReq.responseText);
         ]);
       }
     }
+    console.log(individualTotals);
   });
 
   //make a pie chart of values stored in smallContributions, largeContributions, companyContributions, and partyContributions
@@ -297,8 +298,8 @@ var data = JSON.parse(xhReq.responseText);
 
   //sort individualTotals
   function Comparator(a, b) {
-    if (a[2] < b[2]) return -1;
-    if (a[2] > b[2]) return 1;
+    if (parseFloat(a[2]) < parseFloat(b[2])) return -1;
+    if (parseFloat(a[2]) > parseFloat(b[2])) return 1;
     return 0;
   }
 
