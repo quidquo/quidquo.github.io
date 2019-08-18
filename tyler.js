@@ -3,7 +3,6 @@ var xhReq = new XMLHttpRequest();
 xhReq.open("GET", "https://mydata.iowa.gov/resource/5dtu-swbk.json?$limit=5000", false);
 xhReq.send(null);
 var committee = JSON.parse(xhReq.responseText);
-console.log(committee);
 
 //candidate selector variables
 var candidateName = "";
