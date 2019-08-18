@@ -1,9 +1,12 @@
 ///Retrieve Contribution data set and store it as an array of objects
 
-var xhReq = new XMLHttpRequest();
-xhReq.open("GET", "https://data.iowa.gov/resource/smfg-ds7h.json", false);
-xhReq.send(null);
-var external = JSON.parse(xhReq.responseText);
+$.ajax({
+  url: "https://mydata.iowa.gov/resource/smfg-ds7h.json",
+  type: "GET",
+  data: {
+  }
+}).done(function(external) {
+console.log(external);
 
 //Retrieve committee list data set and store it as an array of objects. Placeholder data is here now.
 var committee = [
@@ -346,3 +349,4 @@ console.log(external);
   }
 }
 
+});
