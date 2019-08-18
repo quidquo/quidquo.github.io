@@ -7,7 +7,7 @@ var committee = [
     candidate_name: "Molly Doe",
     candidate_phone: "5632121793",
     committee_name: "Melissa Helmold for Recorder",
-    committee_number: "6356",
+    committee_number: "2107",
     county: "Cedar",
     district: "0",
     election_year: "2014",
