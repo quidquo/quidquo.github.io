@@ -1,15 +1,7 @@
 ///Retrieve Contribution data set and store it as an array of objects
 
-var external = [];
-$.ajax({
-  url: "https://mydata.iowa.gov/resource/smfg-ds7h.json",
-  type: "GET",
-  data: {
-    "$limit" : 5000,
-    "$$app_token" : "fl6eWmG27OI1NT0QJ8Jq07AR"
-  }
-}).done(function(info) {
-external = info;
+var external = $.getJSON("https://mydata.iowa.gov/id/smfg-ds7h.json", function(){
+
 });
 console.log(external);
 
