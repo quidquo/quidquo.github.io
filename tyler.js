@@ -257,9 +257,9 @@ var data = JSON.parse(xhReq.responseText);
       smallContributions += parseFloat(val.amount);
       //push to array for later use in big donor list
       var check = false;
-      individualTotals.forEach(function(x) {
-        if (val.first_nm == x[0] && val.last_nm == x[1]) {
-          x[2] += parseFloat(val.amount);
+      individualTotals.forEach(function(m) {
+        if (val.first_nm == m[0] && val.last_nm == m[1]) {
+          m[2] += parseFloat(val.amount);
           check = true;
         }
       });
@@ -320,7 +320,7 @@ console.log(companyTotals);
     if (companyTotals[i]) {
       var compList = document.getElementById("company");
         var ent = document.createElement('li');
-      ent.appendChild(document.createTextNode(companyTotals[i]));
+      ent.appendChild(document.createTextNode(companyTotals[i][0]+" "+companyTotals[i][1]+" $"+companyTotals[i][2]));
       compList.appendChild(ent);
     }
   }
@@ -331,7 +331,7 @@ console.log(companyTotals);
     if (individualTotals[j]) {
       var indList = document.getElementById("individual");
         var entr = document.createElement('li');
-      entr.appendChild(document.createTextNode(individualTotals[j]));
+      entr.appendChild(document.createTextNode(individualTotals[j][0] + " "+individualTotals[j][1]+ " $"+individualTotals[j][2]));
       indList.appendChild(entr);
     }
   }
