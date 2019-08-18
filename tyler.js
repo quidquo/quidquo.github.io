@@ -205,7 +205,7 @@ function graphMaker(candidateName, candidateCode)
 
   //filter the external file for just the selected candidate's data
 var xhReq = new XMLHttpRequest();
-var url="https://data.iowa.gov/resource/smfg-ds7h.json?committee_cd="+committeeCode;
+var url="https://data.iowa.gov/resource/smfg-ds7h.json?committee_cd="+candidateCode;
 xhReq.open("GET", url, false);
 xhReq.send(null);
 var data = JSON.parse(xhReq.responseText);
