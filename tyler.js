@@ -4,7 +4,6 @@ var xhReq = new XMLHttpRequest();
 xhReq.open("GET", "https://data.iowa.gov/resource/smfg-ds7h.json", false);
 xhReq.send(null);
 var external = JSON.parse(xhReq.responseText);
-console.log(external);
 
 //Retrieve committee list data set and store it as an array of objects. Placeholder data is here now.
 var committee = [
@@ -15,7 +14,7 @@ var committee = [
     candidate_name: "Molly Doe",
     candidate_phone: "5632121793",
     committee_name: "Melissa Helmold for Recorder",
-    committee_number: "194",
+    committee_number: "6356",
     county: "Cedar",
     district: "0",
     election_year: "2014",
@@ -213,7 +212,7 @@ function graphMaker(candidateName, candidateCode)
 
   //filter the external file for just the selected candidate's data
   var data = external.filter(val => val.committee_cd==candidateCode);
-
+console.log(data);
   //calculate sums of amounts for each variable in the pie chart
   data.forEach(function(val) {
     //stateParty
