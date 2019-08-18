@@ -1,13 +1,3 @@
-///Retrieve Contribution data set and store it as an array of objects
-
-$.ajax({
-  url: "https://mydata.iowa.gov/resource/smfg-ds7h.json",
-  type: "GET",
-  data: {
-  }
-}).done(function(external) {
-console.log(external);
-
 //Retrieve committee list data set and store it as an array of objects. Placeholder data is here now.
 var committee = [
   {
@@ -214,10 +204,14 @@ function graphMaker(candidateName, candidateCode)
   var individualTotals = [];
 
   //filter the external file for just the selected candidate's data
-  var data = external.filter(val => val.committee_cd.toString() == candidateCode.toString());
+var xhReq = new XMLHttpRequest();
+var url="https://data.iowa.gov/resource/smfg-ds7h.json?committee_cd="+committeeCode;
+xhReq.open("GET", url, false);
+xhReq.send(null);
+var data = JSON.parse(xhReq.responseText);
   console.log(candidateCode);
 console.log(data);
-console.log(external);
+
   //calculate sums of amounts for each variable in the pie chart
   data.forEach(function(val) {
     //stateParty
@@ -349,4 +343,3 @@ console.log(external);
   }
 }
 
-});
