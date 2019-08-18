@@ -252,6 +252,7 @@ var data = JSON.parse(xhReq.responseText);
           parseFloat(val.amount)
         ]);
       }
+      console.log(individualTotals);
     } else {
       //smallContributions
       smallContributions += parseFloat(val.amount);
@@ -270,8 +271,8 @@ var data = JSON.parse(xhReq.responseText);
           parseFloat(val.amount)
         ]);
       }
+      console.log(individualTotals);
     }
-    console.log(individualTotals);
   });
 
   //make a pie chart of values stored in smallContributions, largeContributions, companyContributions, and partyContributions
