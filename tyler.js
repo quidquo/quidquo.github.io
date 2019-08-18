@@ -225,12 +225,12 @@ var data = JSON.parse(xhReq.responseText);
       var check = false;
       companyTotals.forEach(function(x) {
         if (val.organization_nm == x[0]) {
-          x[1] += parseFloat(val.amount).toFixed(2);
+          x[1] += parseFloat(val.amount);
           check = true;
         }
       });
       if (check === false) {
-        companyTotals.push([val.organization_nm, parseFloat(val.amount).toFixed(2)]);
+        companyTotals.push([val.organization_nm, parseFloat(val.amount)]);
       }
     } 
       //large Individual Contributions
@@ -241,7 +241,7 @@ var data = JSON.parse(xhReq.responseText);
       var check = false;
       individualTotals.forEach(function(x) {
         if (val.first_nm == x[0] && val.last_nm == x[1]) {
-          x[2] += parseFloat(val.amount).toFixed(2);
+          x[2] += parseFloat(val.amount);
           check = true;
         }
       });
@@ -249,9 +249,10 @@ var data = JSON.parse(xhReq.responseText);
         individualTotals.push([
           val.first_nm,
           val.last_nm,
-          parseFloat(val.amount).toFixed(2)
+          parseFloat(val.amount)
         ]);
       }
+
     } else {
       //smallContributions
       smallContributions += parseFloat(val.amount);
@@ -259,7 +260,7 @@ var data = JSON.parse(xhReq.responseText);
       var check = false;
       individualTotals.forEach(function(m) {
         if (val.first_nm == m[0] && val.last_nm == m[1]) {
-          m[2] += parseFloat(val.amount).toFixed(2);
+          m[2] += parseFloat(val.amount);
           check = true;
         }
       });
@@ -267,7 +268,7 @@ var data = JSON.parse(xhReq.responseText);
         individualTotals.push([
           val.first_nm,
           val.last_nm,
-          parseFloat(val.amount).toFixed(2)
+          parseFloat(val.amount)
         ]);
       }
     }
