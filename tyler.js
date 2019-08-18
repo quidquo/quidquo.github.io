@@ -1,120 +1,19 @@
-///Datasets for contributions and committee codes
+///Retrieve Contribution data set and store it as an array of objects
 
-var external = [
-  {
-    address_line_1: "Iowa Assn. of Business and Industry",
-    address_line_2: "400 E. Court Ave., Ste 100",
-    amount: "40",
-    city: "Des Moines",
-    city_coordinates_zip: "50309-2027",
-    committee_cd: "194",
-    committee_nm: "Iverson For Senate",
-    contr_committee_cd: "9160",
-    date: "2003-01-02T00:00:00.000",
-    organization_nm: "Koch Bros",
-    state_cd: "IA",
-    transaction_id: "{18080320-0219-0050-1796-000000000000}",
-    transaction_type: "CON",
-    zip: "50309-2027"
-  },
-  {
-    address_line_1: "Iowa Assn. of Business and Industry",
-    address_line_2: "400 E. Court Ave., Ste 100",
-    amount: "150",
-    city: "Des Moines",
-    city_coordinates_zip: "50309-2027",
-    committee_cd: "18644",
-    committee_nm: "Iverson For Senate",
-    contr_committee_cd: "960",
-    date: "2003-01-02T00:00:00.000",
-    organization_nm: "Iowa Industry Political Action Committee or IIPAC",
-    state_cd: "IA",
-    transaction_id: "{18080320-0219-0050-1796-000000000000}",
-    transaction_type: "CON",
-    zip: "50309-2027"
-  },
-  {
-    address_line_1: "Iowa Assn. of Business and Industry",
-    address_line_2: "400 E. Court Ave., Ste 100",
-    amount: "150",
-    city: "Des Moines",
-    city_coordinates_zip: "50309-2027",
-    committee_cd: "18644",
-    committee_nm: "Iverson For Senate",
-    contr_committee_cd: "9160",
-    date: "2003-01-02T00:00:00.000",
-    organization_nm: "Iowa Industry Political Action Committee or IIPAC",
-    state_cd: "IA",
-    transaction_id: "{18080320-0219-0050-1796-000000000000}",
-    transaction_type: "CON",
-    zip: "50309-2027"
-  },
-  {
-    address_line_1: "Iowa Assn. of Business and Industry",
-    address_line_2: "400 E. Court Ave., Ste 100",
-    amount: "150",
-    city: "Des Moines",
-    city_coordinates_zip: "50309-2027",
-    committee_cd: "18644",
-    committee_nm: "Iverson For Senate",
-    contr_committee_cd: "9161",
-    date: "2003-01-02T00:00:00.000",
-    organization_nm: "Iowa Industry Political Action Committee or IIPAC",
-    state_cd: "IA",
-    transaction_id: "{18080320-0219-0050-1796-000000000000}",
-    transaction_type: "CON",
-    zip: "50309-2027"
-  },
-  {
-    address_line_1: "Iowa Assn. of Business and Industry",
-    address_line_2: "400 E. Court Ave., Ste 100",
-    amount: "18644",
-    city: "Des Moines",
-    city_coordinates_zip: "50309-2027",
-    committee_cd: "931",
-    committee_nm: "Iverson For Senate",
-
-    date: "2003-01-02T00:00:00.000",
-    first_nm: "Steve",
-    last_nm: "Smith",
-    state_cd: "IA",
-    transaction_id: "{18080320-0219-0050-1796-000000000000}",
-    transaction_type: "CON",
-    zip: "50309-2027"
-  },
-  {
-    address_line_1: "Iowa Assn. of Business and Industry",
-    address_line_2: "400 E. Court Ave., Ste 100",
-    amount: "150",
-    city: "Des Moines",
-    city_coordinates_zip: "50309-2027",
-    committee_cd: "931",
-
-    date: "2003-01-02T00:00:00.000",
-    first_nm: "Steve",
-    last_nm: "Smith",
-    state_cd: "IA",
-    transaction_id: "{18080320-0219-0050-1796-000000000000}",
-    transaction_type: "CON",
-    zip: "50309-2027"
-  },
-  {
-    address_line_1: "Iowa Assn. of Business and Industry",
-    address_line_2: "400 E. Court Ave., Ste 100",
-    amount: "170",
-    city: "Des Moines",
-    city_coordinates_zip: "50309-2027",
-    committee_cd: "931",
-
-    date: "2003-01-02T00:00:00.000",
-    first_nm: "Billy",
-    last_nm: "Bob",
-    state_cd: "IA",
-    transaction_id: "{18080320-0219-0050-1796-000000000000}",
-    transaction_type: "CON",
-    zip: "50309-2027"
+var external = [];
+$.ajax({
+  url: "https://mydata.iowa.gov/resource/smfg-ds7h.json",
+  type: "GET",
+  data: {
+    "$limit" : 5000,
+    "$$app_token" : "fl6eWmG27OI1NT0QJ8Jq07AR"
   }
-];
+}).done(function(info) {
+external = info;
+});
+console.log(external);
+
+//Retrieve committee list data set and store it as an array of objects. Placeholder data is here now.
 var committee = [
   {
     candidate_address: "220 Vermont Ave",
