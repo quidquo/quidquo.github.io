@@ -211,7 +211,7 @@ function graphMaker(candidateName, candidateCode)
   var individualTotals = [];
 
   //filter the external file for just the selected candidate's data
-  var data = external.filter(val => val.committee_cd==candidateCode);
+  var data = external.filter(val => val.committee_cd.toString() == candidateCode.toString());
   console.log(candidateCode);
 console.log(data);
 console.log(external);
