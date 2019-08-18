@@ -119,7 +119,7 @@ var committee = [
     candidate_address: "220 Vermont Ave",
     candidate_city_state_zip: "Clarence IA   52216",
     candidate_email: "melann724@gmail.com",
-    candidate_name: "Melissa Helmold",
+    candidate_name: "Marlene Cool",
     candidate_phone: "5632121793",
     committee_name: "Melissa Helmold for Recorder",
     committee_number: "18644",
@@ -137,7 +137,7 @@ var committee = [
     candidate_address: "220 Vermont Ave",
     candidate_city_state_zip: "Clarence IA   52216",
     candidate_email: "melann724@gmail.com",
-    candidate_name: "Joe",
+    candidate_name: "Joe Doe",
     candidate_phone: "5632121793",
     committee_name: "Melissa Helmold for Recorder",
     committee_number: "18644",
@@ -155,7 +155,7 @@ var committee = [
     candidate_address: "220 Vermont Ave",
     candidate_city_state_zip: "Clarence IA   52216",
     candidate_email: "melann724@gmail.com",
-    candidate_name: "Melony",
+    candidate_name: "Mary Doe",
     candidate_phone: "5632121793",
     committee_name: "Melissa Helmold for Recorder",
     committee_number: "18644",
@@ -278,6 +278,7 @@ var arr = [
   //  json=JSON.parse();
   //};
 
+
  //Search the database for a candidate name
 function oninputFunct(query) {
   document.getElementById("oninput-box-output").innerHTML ="";
@@ -305,7 +306,7 @@ function oninputFunct(query) {
 
 //select candidate when clicked
    var candidateName = "";
-    var candidateCode = 0;
+    var candidateCode = "";
    document.getElementById("oninput-box-output").addEventListener("click",function(e) {
 if(e.target && e.target.nodeName == "LI") {  
   candidateCode = e.target.id;
@@ -316,7 +317,7 @@ if(e.target && e.target.nodeName == "LI") {
         }
     });
 
-    
+
   //filter the json file for just the selected candidate's data
   //var data = json.filter(function(val){
   //  return (val.committee_cd==candidateCode);
@@ -398,7 +399,7 @@ if(e.target && e.target.nodeName == "LI") {
     var data = google.visualization.arrayToDataTable([
       ["Contributor", "Amount"],
       ["Individual Donations <$200", smallContributions],
-      ["Individual Donations <=$200", largeContributions],
+      ["Individual Donations >=$200", largeContributions],
       ["Contributions from Companies or other entities", companyContributions],
       ["State Party Contributions", partyContributions]
     ]);
