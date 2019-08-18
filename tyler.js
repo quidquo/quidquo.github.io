@@ -1,4 +1,10 @@
 //Retrieve committee list data set and store it as an array of objects. Placeholder data is here now.
+var xhReq = new XMLHttpRequest();
+xhReq.open("GET", "https://mydata.iowa.gov/resource/5dtu-swbk.json", false);
+xhReq.send(null);
+var temp = JSON.parse(xhReq.responseText);
+console.log(temp);
+
 var committee = [
   {
     candidate_address: "220 Vermont Ave",
@@ -206,7 +212,6 @@ function graphMaker(candidateName, candidateCode)
   var individualTotals = [];
 
   //filter the external file for just the selected candidate's data
-var xhReq = new XMLHttpRequest();
 var url="https://data.iowa.gov/resource/smfg-ds7h.json?committee_cd="+candidateCode;
 xhReq.open("GET", url, false);
 xhReq.send(null);
@@ -306,7 +311,6 @@ var data = JSON.parse(xhReq.responseText);
   }
 
   individualTotals.sort(Comparator);
-console.log(individualTotals);
   //sort companyTotals
 
   function Changer(a, b) {
@@ -316,7 +320,6 @@ console.log(individualTotals);
   }
 
   companyTotals.sort(Changer);
-console.log(companyTotals);
   //list top 5 companies
   var i;
   for (i = 0; i < 5; i++) {
