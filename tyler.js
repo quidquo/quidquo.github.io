@@ -323,7 +323,7 @@ console.log(companyTotals);
     if (companyTotals[i]) {
       var compList = document.getElementById("company");
         var ent = document.createElement('li');
-      ent.appendChild(document.createTextNode(companyTotals[i][0]+" $"+companyTotals[i][1]));
+      ent.appendChild(document.createTextNode(companyTotals[i][0]+" $"+companyTotals[i][1].toFixed(2)));
       compList.appendChild(ent);
     }
   }
