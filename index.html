@@ -2,6 +2,11 @@
 <html>
 <head>
     <title>QuidQuo</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages: ['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+</script>
 </head>
 
 <body>
@@ -31,7 +36,6 @@
  </main>
  <script type="text/javascript" src="tyler.js"></script>
  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </body>
 <footer>This page draws from publicly available information available at <a href="https://webapp.iecdb.iowa.gov/publicview/NewContributionSearch.aspx"> the IECD search page</a> and it's underlying data available at <a href="https://data.iowa.gov/Government/Iowa-Campaign-Contributions-Received/smfg-ds7h"> the State of Iowa data website.</a>  This tool is intended for informational purposes only. This information is only as accurate as the underlying data.</footer>
 </html>
