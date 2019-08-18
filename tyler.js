@@ -3,7 +3,7 @@
 var xhReq = new XMLHttpRequest();
 xhReq.open("GET", "https://data.iowa.gov/resource/smfg-ds7h.json", false);
 xhReq.send(null);
-var external = JSON.parse(xhReq.responseText).values();
+var external = JSON.parse(xhReq.responseText);
 
 //Retrieve committee list data set and store it as an array of objects. Placeholder data is here now.
 var committee = [
