@@ -278,7 +278,7 @@ var arr = [
   //  json=JSON.parse();
   //};
 
-  //Search the database for a candidate name
+ //Search the database for a candidate name
 function oninputFunct(query) {
   document.getElementById("oninput-box-output").innerHTML ="";
    var x = query.toUpperCase();
@@ -292,19 +292,30 @@ function oninputFunct(query) {
   });
   var nameList = document.getElementById("oninput-box-output");
   y.forEach(function(ind){
+    if(document.getElementById("oninput-box-output").childElementCount < 5){
       var entry = document.createElement('li');
     entry.appendChild(document.createTextNode(ind));
     nameList.appendChild(entry);
+  }
   });
 }
+
 //select candidate when clicked
-
-//input info from selected candidate below
-
-
-  var candidateName = "";
+   var candidateName = "";
   var candidateCode = 6160;
-  //from search of candidate, store candidate code in this variable. I set it temporarily.
+
+
+   document.getElementById("oninput-box-output").addEventListener("click",function(e) {
+if(e.target && e.target.nodeName == "LI") {  
+          candidateName = e.target.textContent;
+  document.getElementById("myInput").value = candidateName;
+  document.getElementById("oninput-box-output").innerHTML = "";
+     document.getElementById("graphHead").innerHTML = candidateName+" Campaign Finance Graph";
+        }
+    });
+
+//update candidate code
+
 
   //filter the json file for just the selected candidate's data
   //var data = json.filter(function(val){
