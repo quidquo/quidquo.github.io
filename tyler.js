@@ -319,18 +319,18 @@ console.log(individualTotals);
 console.log(companyTotals);
   //list top 5 companies
   var i;
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 5; i++) {
     if (companyTotals[i]) {
       var compList = document.getElementById("company");
         var ent = document.createElement('li');
-      ent.appendChild(document.createTextNode(companyTotals[i][0]+" "+companyTotals[i][1]+" $"+companyTotals[i][2]));
+      ent.appendChild(document.createTextNode(companyTotals[i][0]+" $"+companyTotals[i][1]));
       compList.appendChild(ent);
     }
   }
 
   //list top 5 individual contributors
   var j;
-  for (j = 0; j < 3; j++) {
+  for (j = 0; j < 5; j++) {
     if (individualTotals[j]) {
       var indList = document.getElementById("individual");
         var entr = document.createElement('li');
