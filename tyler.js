@@ -278,39 +278,29 @@ var arr = [
   //  json=JSON.parse();
   //};
 
-  //candidate search feature.
-  
-  //    let resultList = document.querySelector(".result");
-  //    resultList.innerHTML = "";
-  //   arr.map(function(algo){
-  //      query.split(" ").map(function (word){
-  //         if(algo.toLowerCase().indexOf(word.toLowerCase()) != -1){
-  //               resultList.innerHTML += `<li class="list-group-item">${algo}</li>`;
-  //
-  //           }
-  //       })
-  //   })
-  //}
-  //  updateResult("");
-
+  //Search the database for a candidate name
 function oninputFunct(query) {
-   var x = query.toUpperCase().split("");
+  document.getElementById("oninput-box-output").innerHTML ="";
+   var x = query.toUpperCase();
+  var y = [];
+  
+  //list those names under the input box
   committee.forEach(function(val){
-    var y = val.candidate_name.toUpperCase().split("");
-var i;
-for (i = 0; i < x.length; i++) { 
-   if (x[i]==y[i]){
- document.getElementById("oninput-box-output").innerHTML = "<li id='new'>" + val.candidate_name+"</li>";
-   }
-  else if(i>0){
-    var element= document.getElementById('new');
-    element.parentNode.removeChild(element);
-    i=5;
-  }
-  else i=5;
+    if (val.candidate_name.toUpperCase().includes(x)){
+    y.push(val.candidate_name.toUpperCase());
   }
   });
+  var nameList = document.getElementById("oninput-box-output");
+  y.forEach(function(ind){
+      var entry = document.createElement('li');
+    entry.appendChild(document.createTextNode(ind));
+    nameList.appendChild(entry);
+  });
 }
+//select candidate when clicked
+
+//input info from selected candidate below
+
 
   var candidateName = "";
   var candidateCode = 6160;
