@@ -252,7 +252,6 @@ var data = JSON.parse(xhReq.responseText);
           parseFloat(val.amount)
         ]);
       }
-      console.log(individualTotals);
     } else {
       //smallContributions
       smallContributions += parseFloat(val.amount);
@@ -271,7 +270,6 @@ var data = JSON.parse(xhReq.responseText);
           parseFloat(val.amount)
         ]);
       }
-      console.log(individualTotals);
     }
   });
 
@@ -299,8 +297,8 @@ var data = JSON.parse(xhReq.responseText);
 
   //sort individualTotals
   function Comparator(a, b) {
-    if (parseFloat(a[2]) < parseFloat(b[2])) return -1;
-    if (parseFloat(a[2]) > parseFloat(b[2])) return 1;
+    if (parseFloat(a[2]) > parseFloat(b[2])) return -1;
+    if (parseFloat(a[2]) < parseFloat(b[2])) return 1;
     return 0;
   }
 
@@ -309,8 +307,8 @@ console.log(individualTotals);
   //sort companyTotals
 
   function Changer(a, b) {
-    if (a[1] < b[1]) return -1;
-    if (a[1] > b[1]) return 1;
+    if (a[1] > b[1]) return -1;
+    if (a[1] < b[1]) return 1;
     return 0;
   }
 
