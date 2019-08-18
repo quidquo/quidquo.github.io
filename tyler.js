@@ -292,7 +292,7 @@ function oninputFunct(query) {
   });
   var nameList = document.getElementById("oninput-box-output");
   y.forEach(function(ind){
-    if(document.getElementById("oninput-box-output").childElementCount < 5){
+    if(x.length> 0 && document.getElementById("oninput-box-output").childElementCount < 5){
       var entry = document.createElement('li');
     entry.appendChild(document.createTextNode(ind));
     nameList.appendChild(entry);
