@@ -332,7 +332,7 @@ console.log(companyTotals);
     if (individualTotals[j]) {
       var indList = document.getElementById("individual");
         var entr = document.createElement('li');
-      entr.appendChild(document.createTextNode(individualTotals[j][0] + " "+individualTotals[j][1]+ " $"+individualTotals[j][2]));
+      entr.appendChild(document.createTextNode(individualTotals[j][0] + " "+individualTotals[j][1]+ " $"+individualTotals[j][2].toFixed(2)));
       indList.appendChild(entr);
     }
   }
