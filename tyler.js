@@ -212,7 +212,9 @@ function graphMaker(candidateName, candidateCode)
 
   //filter the external file for just the selected candidate's data
   var data = external.filter(val => val.committee_cd==candidateCode);
+  console.log(candidateCode);
 console.log(data);
+console.log(external);
   //calculate sums of amounts for each variable in the pie chart
   data.forEach(function(val) {
     //stateParty
