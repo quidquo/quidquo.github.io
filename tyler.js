@@ -1,11 +1,13 @@
-var data = [
+///Datasets for contributions and committee codes
+
+var external = [
   {
     address_line_1: "Iowa Assn. of Business and Industry",
     address_line_2: "400 E. Court Ave., Ste 100",
     amount: "40",
     city: "Des Moines",
     city_coordinates_zip: "50309-2027",
-    committee_cd: "931",
+    committee_cd: "18644",
     committee_nm: "Iverson For Senate",
     contr_committee_cd: "9160",
     date: "2003-01-02T00:00:00.000",
@@ -21,7 +23,7 @@ var data = [
     amount: "150",
     city: "Des Moines",
     city_coordinates_zip: "50309-2027",
-    committee_cd: "931",
+    committee_cd: "18644",
     committee_nm: "Iverson For Senate",
     contr_committee_cd: "960",
     date: "2003-01-02T00:00:00.000",
@@ -37,7 +39,7 @@ var data = [
     amount: "150",
     city: "Des Moines",
     city_coordinates_zip: "50309-2027",
-    committee_cd: "931",
+    committee_cd: "18644",
     committee_nm: "Iverson For Senate",
     contr_committee_cd: "9160",
     date: "2003-01-02T00:00:00.000",
@@ -53,7 +55,7 @@ var data = [
     amount: "150",
     city: "Des Moines",
     city_coordinates_zip: "50309-2027",
-    committee_cd: "931",
+    committee_cd: "18644",
     committee_nm: "Iverson For Senate",
     contr_committee_cd: "9161",
     date: "2003-01-02T00:00:00.000",
@@ -66,7 +68,7 @@ var data = [
   {
     address_line_1: "Iowa Assn. of Business and Industry",
     address_line_2: "400 E. Court Ave., Ste 100",
-    amount: "1500",
+    amount: "18644",
     city: "Des Moines",
     city_coordinates_zip: "50309-2027",
     committee_cd: "931",
@@ -113,13 +115,12 @@ var data = [
     zip: "50309-2027"
   }
 ];
-
 var committee = [
   {
     candidate_address: "220 Vermont Ave",
     candidate_city_state_zip: "Clarence IA   52216",
     candidate_email: "melann724@gmail.com",
-    candidate_name: "Marlene Cool",
+    candidate_name: "Molly Doe",
     candidate_phone: "5632121793",
     committee_name: "Melissa Helmold for Recorder",
     committee_number: "18644",
@@ -133,7 +134,97 @@ var committee = [
     treasurer_email: "melann724@gmail.com",
     treasurer_name: "Melissa Helmold",
     treasurer_phone: "5632121793"
-  },  {
+  },    {
+    candidate_address: "220 Vermont Ave",
+    candidate_city_state_zip: "Clarence IA   52216",
+    candidate_email: "melann724@gmail.com",
+    candidate_name: "Morgan Doe",
+    candidate_phone: "5632121793",
+    committee_name: "Melissa Helmold for Recorder",
+    committee_number: "18644",
+    county: "Cedar",
+    district: "0",
+    election_year: "2014",
+    office_sought: "Recorder",
+    party: "Republican",
+    treasurer_address: "220 Vermont Ave",
+    treasurer_city_state_zip: "Clarence IA   52216",
+    treasurer_email: "melann724@gmail.com",
+    treasurer_name: "Melissa Helmold",
+    treasurer_phone: "5632121793"
+  },   {
+    candidate_address: "220 Vermont Ave",
+    candidate_city_state_zip: "Clarence IA   52216",
+    candidate_email: "melann724@gmail.com",
+    candidate_name: "Megan Doe",
+    candidate_phone: "5632121793",
+    committee_name: "Melissa Helmold for Recorder",
+    committee_number: "18644",
+    county: "Cedar",
+    district: "0",
+    election_year: "2014",
+    office_sought: "Recorder",
+    party: "Republican",
+    treasurer_address: "220 Vermont Ave",
+    treasurer_city_state_zip: "Clarence IA   52216",
+    treasurer_email: "melann724@gmail.com",
+    treasurer_name: "Melissa Helmold",
+    treasurer_phone: "5632121793"
+  },   {
+    candidate_address: "220 Vermont Ave",
+    candidate_city_state_zip: "Clarence IA   52216",
+    candidate_email: "melann724@gmail.com",
+    candidate_name: "James Doeforth",
+    candidate_phone: "5632121793",
+    committee_name: "Melissa Helmold for Recorder",
+    committee_number: "18644",
+    county: "Cedar",
+    district: "0",
+    election_year: "2014",
+    office_sought: "Recorder",
+    party: "Republican",
+    treasurer_address: "220 Vermont Ave",
+    treasurer_city_state_zip: "Clarence IA   52216",
+    treasurer_email: "melann724@gmail.com",
+    treasurer_name: "Melissa Helmold",
+    treasurer_phone: "5632121793"
+  },   {
+    candidate_address: "220 Vermont Ave",
+    candidate_city_state_zip: "Clarence IA   52216",
+    candidate_email: "melann724@gmail.com",
+    candidate_name: "John Doeverstein",
+    candidate_phone: "5632121793",
+    committee_name: "Melissa Helmold for Recorder",
+    committee_number: "18644",
+    county: "Cedar",
+    district: "0",
+    election_year: "2014",
+    office_sought: "Recorder",
+    party: "Republican",
+    treasurer_address: "220 Vermont Ave",
+    treasurer_city_state_zip: "Clarence IA   52216",
+    treasurer_email: "melann724@gmail.com",
+    treasurer_name: "Melissa Helmold",
+    treasurer_phone: "5632121793"
+  },   {
+    candidate_address: "220 Vermont Ave",
+    candidate_city_state_zip: "Clarence IA   52216",
+    candidate_email: "melann724@gmail.com",
+    candidate_name: "Michael Doe",
+    candidate_phone: "5632121793",
+    committee_name: "Melissa Helmold for Recorder",
+    committee_number: "18644",
+    county: "Cedar",
+    district: "0",
+    election_year: "2014",
+    office_sought: "Recorder",
+    party: "Republican",
+    treasurer_address: "220 Vermont Ave",
+    treasurer_city_state_zip: "Clarence IA   52216",
+    treasurer_email: "melann724@gmail.com",
+    treasurer_name: "Melissa Helmold",
+    treasurer_phone: "5632121793"
+  }, {
     candidate_address: "220 Vermont Ave",
     candidate_city_state_zip: "Clarence IA   52216",
     candidate_email: "melann724@gmail.com",
@@ -155,7 +246,7 @@ var committee = [
     candidate_address: "220 Vermont Ave",
     candidate_city_state_zip: "Clarence IA   52216",
     candidate_email: "melann724@gmail.com",
-    candidate_name: "Mary Doe",
+    candidate_name: "Zach Doe",
     candidate_phone: "5632121793",
     committee_name: "Melissa Helmold for Recorder",
     committee_number: "18644",
@@ -172,114 +263,19 @@ var committee = [
   }
 ];
 
-var arr = [
-  "anagrams-of-string-(with-duplicates)",
-  "array-concatenation",
-  "array-difference",
-  "array-includes",
-  "array-intersection",
-  "array-remove",
-  "array-sample",
-  "array-union",
-  "array-without",
-  "array-zip",
-  "average-of-array-of-numbers",
-  "bottom-visible",
-  "capitalize-first-letter-of-every-word",
-  "capitalize-first-letter",
-  "chain-asynchronous-functions",
-  "check-for-palindrome",
-  "chunk-array",
-  "collatz-algorithm",
-  "compact",
-  "count-occurrences-of-a-value-in-array",
-  "current-URL",
-  "curry",
-  "deep-flatten-array",
-  "distance-between-two-points",
-  "divisible-by-number",
-  "drop-elements-in-array",
-  "element-is-visible-in-viewport",
-  "escape-regular-expression",
-  "even-or-odd-number",
-  "factorial",
-  "fibonacci-array-generator",
-  "fill-array",
-  "filter-out-non-unique-values-in-an-array",
-  "flatten-array-up-to-depth",
-  "flatten-array",
-  "get-days-difference-between-dates",
-  "get-max-value-from-array",
-  "get-min-value-from-array",
-  "get-native-type-of-value",
-  "get-scroll-position",
-  "greatest-common-divisor-(GCD)",
-  "group-by",
-  "hamming-distance",
-  "head-of-list",
-  "hexcode-to-RGB",
-  "initial-of-list",
-  "initialize-array-with-range",
-  "initialize-array-with-values",
-  "is-array",
-  "is-boolean",
-  "is-function",
-  "is-number",
-  "is-string",
-  "is-symbol",
-  "last-of-list",
-  "measure-time-taken-by-function",
-  "median-of-array-of-numbers",
-  "nth-element-of-array",
-  "number-to-array-of-digits",
-  "object-from-key-value-pairs",
-  "object-to-key-value-pairs",
-  "ordinal-suffix-of-number",
-  "percentile",
-  "pick",
-  "pipe",
-  "powerset",
-  "promisify",
-  "random-integer-in-range",
-  "random-number-in-range",
-  "redirect-to-URL",
-  "reverse-a-string",
-  "RGB-to-hexadecimal",
-  "round-number-to-n-digits",
-  "run-promises-in-series",
-  "scroll-to-top",
-  "shallow-clone-object",
-  "shuffle-array",
-  "similarity-between-arrays",
-  "sleep",
-  "sort-characters-in-string-(alphabetical)",
-  "speech-synthesis-(experimental)",
-  "standard-deviation",
-  "sum-of-array-of-numbers",
-  "swap-values-of-two-variables",
-  "tail-of-list",
-  "take-right",
-  "take",
-  "truncate-a-string",
-  "unique-values-of-array",
-  "URL-parameters",
-  "UUID-generator",
-  "validate-email",
-  "validate-number",
-  "value-or-default",
-  "write-json-to-file"
-];
+//candidate selector variables
+var candidateName = "";
+var candidateCode = 0;
 
-  //req=new XMLHttpRequest();
-  //url="https://data.iowa.gov/resource/fbcf-6uqr.json"
-  //req.open("GET",url,true);
-  //req.send();
-  //req.onload=function(){
-  //  json=JSON.parse();
-  //};
+//variables for graph propogation
+  var smallContributions = 0;
+  var largeContributions = 0;
+  var companyContributions = 0;
+  var partyContributions = 0;
+  var companyTotals = [];
+  var individualTotals = [];
 
-
- //Search the database for a candidate name
+//Search the database for a candidate name
 function oninputFunct(query) {
   document.getElementById("oninput-box-output").innerHTML ="";
    var x = query.toUpperCase();
@@ -305,30 +301,26 @@ function oninputFunct(query) {
 }
 
 //select candidate when clicked
-   var candidateName = "";
-    var candidateCode = "";
    document.getElementById("oninput-box-output").addEventListener("click",function(e) {
 if(e.target && e.target.nodeName == "LI") {  
+  
+  //update candidate name and code
   candidateCode = e.target.id;
-          candidateName = e.target.textContent;
+   candidateName = e.target.textContent;
+  
+  //clean up html search bar
   document.getElementById("myInput").value = candidateName;
   document.getElementById("oninput-box-output").innerHTML = "";
-     document.getElementById("graphHead").innerHTML = candidateName+" Campaign Finance Graph";
+  document.getElementById("graphHead").innerHTML = candidateName+" Campaign Finance Graph";
+  graphMaker(candidateName, candidateCode);
+  //propogate graph
         }
     });
 
-
-  //filter the json file for just the selected candidate's data
-  //var data = json.filter(function(val){
-  //  return (val.committee_cd==candidateCode);
-  //});
-
-  var smallContributions = 0;
-  var largeContributions = 0;
-  var companyContributions = 0;
-  var partyContributions = 0;
-  var companyTotals = [];
-  var individualTotals = [];
+function graphMaker(candidateName, candidateCode)
+{
+  //filter the external file for just the selected candidate's data
+  var data = external.filter(val => val.committee_cd==candidateCode);
 
   //calculate sums of amounts for each variable in the pie chart
   data.forEach(function(val) {
@@ -457,4 +449,5 @@ if(e.target && e.target.nodeName == "LI") {
       );
     }
   }
+}
 
