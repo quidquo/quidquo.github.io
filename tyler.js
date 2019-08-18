@@ -209,8 +209,6 @@ var url="https://data.iowa.gov/resource/smfg-ds7h.json?committee_cd="+candidateC
 xhReq.open("GET", url, false);
 xhReq.send(null);
 var data = JSON.parse(xhReq.responseText);
-  console.log(candidateCode);
-console.log(data);
 
   //calculate sums of amounts for each variable in the pie chart
   data.forEach(function(val) {
@@ -305,7 +303,7 @@ console.log(data);
   }
 
   individualTotals.sort(Comparator);
-
+console.log(individualTotals);
   //sort companyTotals
 
   function Changer(a, b) {
@@ -315,14 +313,15 @@ console.log(data);
   }
 
   companyTotals.sort(Changer);
-
+console.log(companyTotals);
   //list top 5 companies
   var i;
   for (i = 0; i < 4; i++) {
     if (companyTotals[i]) {
-      $("#company").html(
-        "<li>" + companyTotals[i][0] + " $" + companyTotals[i][1] + "</li>"
-      );
+      var compList = document.getElementById("company");
+        var ent = document.createElement('li');
+      ent.appendChild(document.createTextNode(companyTotals[i]));
+      compList.appendChild(ent);
     }
   }
 
@@ -330,15 +329,10 @@ console.log(data);
   var j;
   for (j = 0; j < 4; j++) {
     if (individualTotals[j]) {
-      $("#individual").html(
-        "<li>" +
-          individualTotals[j][0] +
-          " " +
-          individualTotals[j][1] +
-          " $" +
-          individualTotals[j][2] +
-          "</li>"
-      );
+      var indList = document.getElementById("individual");
+        var entr = document.createElement('li');
+      entr.appendChild(document.createTextNode(individualTotals[j]));
+      indList.appendChild(entr);
     }
   }
 }
