@@ -267,14 +267,6 @@ var committee = [
 var candidateName = "";
 var candidateCode = 0;
 
-//variables for graph propogation
-  var smallContributions = 0;
-  var largeContributions = 0;
-  var companyContributions = 0;
-  var partyContributions = 0;
-  var companyTotals = [];
-  var individualTotals = [];
-
 //Search the database for a candidate name
 function oninputFunct(query) {
   document.getElementById("oninput-box-output").innerHTML ="";
@@ -319,6 +311,14 @@ if(e.target && e.target.nodeName == "LI") {
 
 function graphMaker(candidateName, candidateCode)
 {
+  //variables for graph propogation
+  var smallContributions = 0;
+  var largeContributions = 0;
+  var companyContributions = 0;
+  var partyContributions = 0;
+  var companyTotals = [];
+  var individualTotals = [];
+
   //filter the external file for just the selected candidate's data
   var data = external.filter(val => val.committee_cd==candidateCode);
 
@@ -333,7 +333,7 @@ function graphMaker(candidateName, candidateCode)
     } else if (val.contr_committee_cd) {
       //companies
       companyContributions += parseFloat(val.amount);
-      //push to array for later use
+      //push to array for later use in company list
       var check = false;
       companyTotals.forEach(function(x) {
         if (val.organization_nm == x[0]) {
@@ -344,10 +344,12 @@ function graphMaker(candidateName, candidateCode)
       if (check === false) {
         companyTotals.push([val.organization_nm, parseFloat(val.amount)]);
       }
-    } else if (val.amount >= 200) {
+    } 
       //large Individual Contributions
+      else if (val.amount >= 200) {
+      
       largeContributions += parseFloat(val.amount);
-      //push to array for later use
+      //push to array for later use in big donor list
       var check = false;
       individualTotals.forEach(function(x) {
         if (val.first_nm == x[0] && val.last_nm == x[1]) {
@@ -365,7 +367,7 @@ function graphMaker(candidateName, candidateCode)
     } else {
       //smallContributions
       smallContributions += parseFloat(val.amount);
-      //push to array for later use
+      //push to array for later use in big donor list
       var check = false;
       individualTotals.forEach(function(x) {
         if (val.first_nm == x[0] && val.last_nm == x[1]) {
