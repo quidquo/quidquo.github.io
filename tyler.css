@@ -45,6 +45,19 @@ ul{
   list-style: none;
 }
 
+li:hover{
+  background-color: #f2f2f2;
+}
+
+li{
+  padding: 5px 0px 0px 80px;
+}
+
+#cap{
+  font-weight: bold;
+  background-color: white;
+}
+
 #cursor{
  position: absolute;
   height: 150px;

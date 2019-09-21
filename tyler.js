@@ -34,7 +34,13 @@ function oninputFunct(query) {
   });
   var nameList = document.getElementById("oninput-box-output");
   y.forEach(function(ind){
-    if(x.length> 0 && document.getElementById("oninput-box-output").childElementCount < 5){
+    if (x.length> 0 && document.getElementById("oninput-box-output").childElementCount < 1){
+      var caption = document.createElement('li');
+      caption.setAttribute("id", "cap");
+      caption.appendChild(document.createTextNode("Candidate Name, Office Sought"));
+      nameList.appendChild(caption);
+    }
+    else if(x.length> 0 && document.getElementById("oninput-box-output").childElementCount < 6){
       var entry = document.createElement('li');
       entry.setAttribute("id", z[y.indexOf(ind)]);
     entry.appendChild(document.createTextNode(ind+", "+office[y.indexOf(ind)]));
@@ -45,7 +51,7 @@ function oninputFunct(query) {
 
 //select candidate when clicked
    document.getElementById("oninput-box-output").addEventListener("click",function(e) {
-if(e.target && e.target.nodeName == "LI") {  
+if(e.target && e.target.nodeName == "LI" && e.target.id !== "cap") {  
   
   //update candidate name and code
   candidateCode = e.target.id;
