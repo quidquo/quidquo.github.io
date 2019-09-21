@@ -1,7 +1,10 @@
 body{
   background-color: #f2f2f2;
   margin: 0px 0px 0px 0px;
-  padding: 10px 10px 10px 10px;
+}
+
+.pad{
+  padding: 0px 15px;
 }
 
 h1{
