@@ -63,8 +63,11 @@ if(e.target && e.target.nodeName == "LI" && e.target.id !== "cap") {
   document.getElementById("individual").innerHTML = "";
   document.getElementById("company").innerHTML = "";
   document.getElementById("graphHead").innerHTML = candidateName+" Campaign Finance Graph";
-  graphMaker(candidateName, candidateCode);
   //propogate graph
+  var q = document.getElementById("candidateInfo");
+  q.style.display = "block";
+  graphMaker(candidateName, candidateCode);
+  
         }
     });
 

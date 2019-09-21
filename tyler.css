@@ -50,12 +50,16 @@ li:hover{
 }
 
 li{
-  padding: 5px 0px 0px 80px;
+  padding: 0px 0px 5px 80px;
 }
 
 #cap{
   font-weight: bold;
   background-color: white;
+}
+
+#candidateInfo{
+  display: none;
 }
 
 #cursor{
