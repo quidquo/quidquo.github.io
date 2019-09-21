@@ -9,6 +9,8 @@ body{
 
 #tool{
   background-color: white;
+  margin: 0px;
+  padding: 0px 0px;
 }
 
 h1{
