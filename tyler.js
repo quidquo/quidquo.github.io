@@ -15,6 +15,7 @@ var committee = JSON.parse(xhReq.responseText);
 //candidate selector variables
 var candidateName = "";
 var candidateCode = 0;
+var office ="";
 
 //Search the database for a candidate name
 function oninputFunct(query) {
