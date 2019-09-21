@@ -15,7 +15,6 @@ var committee = JSON.parse(xhReq.responseText);
 //candidate selector variables
 var candidateName = "";
 var candidateCode = 0;
-var office ="";
 
 //Search the database for a candidate name
 function oninputFunct(query) {
@@ -23,12 +22,14 @@ function oninputFunct(query) {
    var x = query.toUpperCase();
   var y = [];
   var z = [];
+  var office =[];
   
   //list those names under the input box
   committee.forEach(function(val){
     if (val.candidate_name && val.candidate_name.toUpperCase().includes(x)){
     y.push(val.candidate_name.toUpperCase());
       z.push(val.committee_number);
+      office.push(val.office_sought);
   }
   });
   var nameList = document.getElementById("oninput-box-output");
@@ -36,7 +37,7 @@ function oninputFunct(query) {
     if(x.length> 0 && document.getElementById("oninput-box-output").childElementCount < 5){
       var entry = document.createElement('li');
       entry.setAttribute("id", z[y.indexOf(ind)]);
-    entry.appendChild(document.createTextNode(ind));
+    entry.appendChild(document.createTextNode(ind+", "+office[y.indexOf(ind)]));
     nameList.appendChild(entry);
   }
   });
