@@ -1,3 +1,11 @@
+//make the spotlight work
+$(document).on('mousemove', function(e){
+  $('#cursor').css({
+     left:  e.pageX-50,
+     top:   e.pageY-50
+  });
+});
+
 //Retrieve committee list data set and store it as an array of objects. Placeholder data is here now.
 var xhReq = new XMLHttpRequest();
 xhReq.open("GET", "https://mydata.iowa.gov/resource/5dtu-swbk.json?$limit=5000", false);
