@@ -1,11 +1,16 @@
 body{  
-  background-color: lightgray;
-  @media only screen and (max-width: 600px) {
-    body {
-      background-color: white;
-    }
+  background-color: #f2f2f2;
+
   }
+  .break{
+    background-color: black;
+    height: 2px;
   }
+
+
+#tool{
+  background-color: white;
+}
   
   h1{
     text-align: center;
