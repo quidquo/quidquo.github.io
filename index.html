@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>QuidQuo</title>
-    <link rel="stylesheet" type="text/css" href="tyler.css">
+    <link rel="stylesheet" type="text/css" href="tyler.css"></link>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
@@ -13,14 +13,15 @@
   <p id="slogan">Be the pro.</p>
    <h2>Campaign Finance Search</h2>
    <p>This tool displays a campaign finance breakdown for the candidate you select. All data represents contributions as reported to the State of Iowa Ethics and Campaign Disclosure Board (IECD). It includes all state and local candidates in Iowa who report to the IECD. It does not include contributions to federal level candidates (e.g., US Senators or US Representatives) as those contributions are reported to the Federal Election Commission. Data is most up to date after reporting deadlines for candidates and committees. See <a href="https://ethics.iowa.gov/reports/campaign-due-dates/campaign-reporting-deadlines">this listing of Iowa Ethics reporting deadlines for more information.</a></p>
-   <div class="break">
-     
-   </div>
+   <div class="break"></div>
    <div id="tool">
      <h3>Search for a Candidate</h3>
      <div id="search">
+       <form>
      <label for="candidate name">Candidate Name:</label>
   <input type="search" id="myInput" oninput="oninputFunct(this.value)" placeholder="Name..." name="search" accesskey="c" tabindex="1" type="search">
+  </input>
+  </form>
 <ul id="oninput-box-output"></ul>
  
    <div>Click here to <a href="https://gis.legis.iowa.gov/FYL/index.html" target="_blank">find your legislator</a></div>
