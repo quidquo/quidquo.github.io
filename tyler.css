@@ -7,7 +7,7 @@ body{
   height: 2px;
 }
 
-#tool{
+.tool{
   background-color: white;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
