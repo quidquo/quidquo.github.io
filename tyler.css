@@ -28,3 +28,10 @@ body{
      border-radius: 50%;
      z-index: -1;
    }
+
+   h3{
+    padding: 10px 0px;
+  }
+  #search{
+    padding: 0px 30px;
+  }
