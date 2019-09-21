@@ -1,8 +1,8 @@
 //make the spotlight work
 $(document).on('mousemove', function(e){
   $('#cursor').css({
-     left:  e.pageX-50,
-     top:   e.pageY-50
+     left:  e.pageX-75,
+     top:   e.pageY-75
   });
 });
 

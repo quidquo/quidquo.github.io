@@ -1,37 +1,36 @@
-body{  
+body{
   background-color: #f2f2f2;
+}
 
-  }
-  .break{
-    background-color: black;
-    height: 2px;
-  }
-
+.break{
+  background-color: black;
+  height: 2px;
+}
 
 #tool{
   background-color: white;
 }
-  
-  h1{
-    text-align: center;
-  }
-  
-  #slogan{
-    text-align: center;
-  }
 
-  #cursor{
-    position: absolute;
-     height: 100px;
-     width: 100px;
-     background-color: white;
-     border-radius: 50%;
-     z-index: -1;
-   }
+h1{
+  text-align: center;
+}
 
-   h3{
-    padding: 10px 0px;
-  }
-  #search{
-    padding: 0px 30px;
-  }
+#slogan{
+  text-align: center;
+}
+
+#cursor{
+ position: absolute;
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+h3{
+  padding: 10px 0px;
+}
+#search{
+  padding: 0px 10px;
+}
