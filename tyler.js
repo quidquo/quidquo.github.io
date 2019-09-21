@@ -63,7 +63,7 @@ function graphMaker(candidateName, candidateCode)
   var individualTotals = [];
 
   //filter the external file for just the selected candidate's data
-var url="https://data.iowa.gov/resource/smfg-ds7h.json?committee_cd="+candidateCode;
+var url="https://data.iowa.gov/resource/smfg-ds7h.json?committee_cd="+candidateCode+"&$limit=50000";
 xhReq.open("GET", url, false);
 xhReq.send(null);
 var data = JSON.parse(xhReq.responseText);
