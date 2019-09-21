@@ -164,6 +164,8 @@ var data = JSON.parse(xhReq.responseText);
       ["State Party Contributions", partyContributions]
     ]);
     var options = {
+      height: 300,
+      chartArea: {left: 10, top: 50, width:'80%',height:'80%'},
       title: candidateName
     };
     var chart = new google.visualization.PieChart(
