@@ -1,6 +1,7 @@
 body{
   background-color: #f2f2f2;
   margin: 0px 0px 0px 0px;
+  pointer-events: default;
 }
 
 h1{
@@ -69,13 +70,13 @@ ul li{
 }
 
 #cursor{
- position: absolute;
-  height: 150px;
-  width: 150px;
-  background-color: white;
-  border-radius: 50%;
-  z-index: -1;
-}
+  position: absolute;
+   height: 150px;
+   width: 150px;
+   background-color: white;
+   border-radius: 50%;
+   z-index: -1;
+ }
 
 #egg{
   color: #f2f2f2;
@@ -87,3 +88,5 @@ ul li{
 #egg:hover{
   color: darkgreen;
 }
+
+svg > g > g:last-child { pointer-events: none };
