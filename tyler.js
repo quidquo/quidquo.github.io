@@ -196,7 +196,7 @@ var data = JSON.parse(xhReq.responseText);
     if (companyTotals[i]) {
       var compList = document.getElementById("company");
         var ent = document.createElement('li');
-      ent.appendChild(document.createTextNode(companyTotals[i][0]+" $"+companyTotals[i][1].toFixed(2)));
+      ent.appendChild(document.createTextNode(companyTotals[i][0]+" $"+companyTotals[i][1].toLocaleString('en', {maximumSignificantDigits : 21})));
       compList.appendChild(ent);
     }
   }
@@ -207,7 +207,7 @@ var data = JSON.parse(xhReq.responseText);
     if (individualTotals[j]) {
       var indList = document.getElementById("individual");
         var entr = document.createElement('li');
-      entr.appendChild(document.createTextNode(individualTotals[j][0] + " "+individualTotals[j][1]+ " $"+individualTotals[j][2].toFixed(2)));
+      entr.appendChild(document.createTextNode(individualTotals[j][0] + " "+individualTotals[j][1]+ " $"+individualTotals[j][2].toLocaleString('en', {maximumSignificantDigits : 21})));
       indList.appendChild(entr);
     }
   }
