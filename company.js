@@ -13,10 +13,10 @@ xhReq.send(null);
 var committee = JSON.parse(xhReq.responseText);
 
 //candidate selector variables
-var candidateName = "";
-var candidateCode = 0;
+var entityName = "";
+var entityCode = 0;
 
-//Search the database for a candidate name
+//Search the database for an entity name
 function oninputFunct(query) {
   document.getElementById("oninput-box-output").innerHTML ="";
    var x = query.toUpperCase();
@@ -54,19 +54,19 @@ function oninputFunct(query) {
 if(e.target && e.target.nodeName == "LI" && e.target.id !== "cap") {  
   
   //update candidate name and code
-  candidateCode = e.target.id;
-   candidateName = e.target.textContent;
+  entityCode = e.target.id;
+   entityName = e.target.textContent;
   
   //clean up html search bar
-  document.getElementById("myInput").value = candidateName;
+  document.getElementById("myInput").value = entityName;
   document.getElementById("oninput-box-output").innerHTML = "";
   document.getElementById("individual").innerHTML = "";
   document.getElementById("company").innerHTML = "";
-  document.getElementById("graphHead").innerHTML = candidateName+" Campaign Finance Graph";
+  document.getElementById("graphHead").innerHTML = entityName+" Campaign Finance Graph";
   //propogate graph
   var q = document.getElementById("candidateInfo");
   q.style.display = "block";
-  graphMaker(candidateName, candidateCode);
+  graphMaker(entityName, entityCode);
   
         }
     });

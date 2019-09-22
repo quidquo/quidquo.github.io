@@ -6,7 +6,7 @@ $(document).on('mousemove', function(e){
   });
 });
 
-//Retrieve committee list data set and store it as an array of objects. Placeholder data is here now.
+//Retrieve committee list data set and store it as an array of objects
 var xhReq = new XMLHttpRequest();
 xhReq.open("GET", "https://mydata.iowa.gov/resource/5dtu-swbk.json?$limit=5000", false);
 xhReq.send(null);
