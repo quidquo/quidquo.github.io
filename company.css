@@ -73,13 +73,3 @@ ul li{
   z-index: -1;
 }
 
-#egg{
-  color: #f2f2f2;
-  width: 70px;
-  position: absolute;
-  right: 0px;
-}
-
-#egg:hover{
-  color: darkgreen;
-}

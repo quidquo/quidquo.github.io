@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QuidQuo</title>
+    <link rel="stylesheet" type="text/css" href="company.css"></link>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+ <main>
+ <h1>Quidquo</h1>
+  <p id="slogan">Be the pro.</p>
+  <div class="pad">
+   <h2>Company/Entity Contributions Search</h2>
+   <p>This tool displays a a breakdown of the amount of money spent by a company or other entity, which candidates they have contributed the most to. All data represents contributions as reported to the State of Iowa Ethics and Campaign Disclosure Board (IECD). It includes contributions to all active state and local candidates in Iowa who report to the IECD. It does not include contributions to federal level candidates (e.g., US Senators or US Representatives) as those contributions are reported to the Federal Election Commission. Data is most up to date after reporting deadlines for candidates and committees. See <a href="https://ethics.iowa.gov/reports/campaign-due-dates/campaign-reporting-deadlines" target="_blank">this listing of Iowa Ethics reporting deadlines for more information.</a></p>
+   </div>
+  <div class="tool">
+   <div class="break"></div>
+   <div class="pad">
+     <h3>Search for a Company or Other Entity</h3>
+     <div id="search">
+       <form>
+     <label for="company/entity name">Company/Entity Name:</label>
+  <input type="search" id="myInput" oninput="oninputFunct(this.value)" placeholder="Name..." name="search" accesskey="c" tabindex="1" type="search">
+  </input>
+  </form>
+<ul id="oninput-box-output"></ul>
+ 
+</div>
+<div id="candidateInfo">
+ <div class="candidateGraph">
+     <h3 id="graphHead">Campaign Finance Graph</h3>
+     <figure id="piechart"></figure>
+   </div>
+   <div id="candidateCompanies">
+     <h3> Top 5 Company and Other Entities Donors:</h3>
+     <ol id="company">
+     </ol>
+   </div>
+   <div id="candidateDonors">
+     <h3> Top 5 Individual Donors:</h3>
+     <ol id="individual">
+     </ol>
+   </div>
+   </div>
+   <div id="cursor"></div>
+   </div>
+   <div class="break"></div>
+   </div>
+ </main>
+ <script type="text/javascript" src="company.js"></script>
+</body>
+<footer class="pad">This page draws from publicly available information available at <a href="https://webapp.iecdb.iowa.gov/publicview/NewContributionSearch.aspx" target="_blank"> the IECD search page</a> and it's underlying data available at <a href="https://data.iowa.gov/Government/Iowa-Campaign-Contributions-Received/smfg-ds7h" target="_blank"> the State of Iowa data website.</a> This tool is intended for informational purposes only. This information is only as accurate as the underlying data.</footer>
+</html>
