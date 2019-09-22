@@ -30,7 +30,7 @@ h3{
   margin: 5px 0px 10px 0px;
 }
 
-.search{
+.searchCand{
   padding: 0px 0px 0px 10px;
 }
 
@@ -42,9 +42,12 @@ h3{
 }
 
 input{
-  padding: 0px 30px;
-  width: 350px;
-  font-size: 16px;
+  -webkit-appearance: none; -moz-appearance: none;
+  display: block;
+  margin: 0px 0px 0px 10px;
+  width: 50%; height: 40px;
+  line-height: 40px; font-size: 17px;
+  border: 1px solid #bbb;
 }
 
 ul{
@@ -57,11 +60,11 @@ ul li:hover{
 }
 
 #oninput-box-output li{
-  padding: 0px 0px 5px 80px;
+  padding: 0px 0px 5px 0px;
 }
 
 #oninput-box-output-ent li {
-  padding: 0px 0px 5px 120px;
+  padding: 0px 0px 5px 0px;
 }
 
 #cap{
@@ -132,6 +135,10 @@ h4{
 
 #egg:hover{
   color: darkgreen;
+}
+
+footer{
+  height: 100px;
 }
 
 svg > g > g:last-child { pointer-events: none };
