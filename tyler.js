@@ -34,19 +34,17 @@ function oninputFunct(query) {
   });
   var nameList = document.getElementById("oninput-box-output");
   y.forEach(function(ind){
-    if (x.length> 0 && document.getElementById("oninput-box-output").childElementCount < 1){
-      var caption = document.createElement('li');
-      caption.setAttribute("id", "cap");
-      caption.appendChild(document.createTextNode("Candidate Name, Office Sought"));
-      nameList.appendChild(caption);
-    }
-    else if(x.length> 0 && document.getElementById("oninput-box-output").childElementCount < 6){
+    if(x.length> 0 && document.getElementById("oninput-box-output").childElementCount < 5){
       var entry = document.createElement('li');
       entry.setAttribute("id", z[y.indexOf(ind)]);
-    entry.appendChild(document.createTextNode(ind+", "+office[y.indexOf(ind)]));
-    nameList.appendChild(entry);
+      entry.appendChild(document.createTextNode(ind+", "+office[y.indexOf(ind)]));
+      nameList.appendChild(entry);
   }
   });
+  var caption = document.createElement('li');
+  caption.setAttribute("id", "cap");
+  caption.appendChild(document.createTextNode("Candidate Name, Office Sought"));
+  nameList.prepend(caption);
 }
 
 //select candidate when clicked
