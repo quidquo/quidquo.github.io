@@ -356,8 +356,8 @@ document.getElementById("company").addEventListener("click",function(g) {
     //update entity name and code
     entityCode = parseInt(g.target.id, 10);
      entityName = g.target.textContent.substr(0, g.target.textContent.indexOf(' $'));
-     
     retrieveEntInfo(entityCode, entityName);
+    window.location.hash = "#listing";
   }
       });
 
