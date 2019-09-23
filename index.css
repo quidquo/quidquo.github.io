@@ -50,6 +50,13 @@ input{
   border: 1px solid #bbb;
 }
 
+@media screen and (max-width: 600px) {
+  input {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
 ul{
   list-style: none;
 }
