@@ -1,0 +1,39 @@
+body{
+    background-color: #f2f2f2
+}
+
+.title{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#egg{
+    color: #f2f2f2;
+    width: 70px;
+    position: absolute;
+    right: 25%;
+  }
+  
+  #egg:hover{
+    color: darkgreen;
+  }
+
+  #dirtyPol{
+      background-color: black;
+      height: 20px;
+      width: 20px;
+      position: fixed;
+  }
+
+  #cursor{
+    position: absolute;
+     height: 100px;
+     width: 100px;
+     background-color: white;
+     border-radius: 50%;
+     z-index: -1;
+   }

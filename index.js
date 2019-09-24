@@ -1,11 +1,3 @@
-//make the spotlight work
-$(document).on('mousemove', function(e){
-  $('#cursor').css({
-     left:  e.pageX-75,
-     top:   e.pageY-75
-  });
-});
-
 //Search the database for a candidate name
 function oninputFunct(query) {
 //Retrieve committee list data set and store it as an array of objects
