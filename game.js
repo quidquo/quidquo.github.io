@@ -1,13 +1,15 @@
+var score = 0;
 var cursor = document.getElementById('cursor');
+var gameOver=false;
 
 document.onmousemove = function (e) {
     $("#cursor").css({
-        left:  (e.pageX)-$("#cursor").width()/2,
-        top:   (e.pageY)-$("#cursor").height()/2
+        top:   (e.pageY)-$("#cursor").height()/2,
+        left:  (e.pageX)-$("#cursor").width()/2
      });
 };
 
-var text =["Quidquo.org originally had a spotlight feature.", "My wife didn't like it.", "She said it looked like a 1990s geocities site.", "So I put it here.", "Use it to find the dark money.", "But don't let the dirty politicians catch you!", "Click here to begin!"];
+var text =["Quidquo.org originally had a spotlight feature.", "My wife didn't like it.", "She said it looked like a 1990s geocities site.", "So I put it here.", "Use it to find the dark money.", "But don't let the dirty politicians catch you!", "You are safe if they enter your spotlight,", "but not if they catch your cursor!","Click here to begin!"];
 var counter = 0;
 var elem = document.getElementById("text");
 var inst = setInterval(change, 3500);
@@ -32,12 +34,13 @@ function change() {
     }
     
     function movePols(){
+        var oldq = $('.dirtyPol').offset();
         var newq = makeNewPosition();
-        var oldq = $('#dirtyPol').offset();
         var speed = calcSpeed([oldq.top, oldq.left], newq);
         
-        $('#dirtyPol').animate({ top: newq[0], left: newq[1] }, speed, function(){
-          movePols();        
+        $('.dirtyPol').animate({ top: newq[0], left: newq[1] }, speed, function(){
+            if(gameOver===false){
+                movePols();}      
         });
         
     };
@@ -65,9 +68,41 @@ function moveMoney(){
 });
 }
 
- $(".title").click(function(){
+function addPol(){
+    var newPol = document.createElement("DIV");
+    newPol.setAttribute("class","dirtyPol");
+    newPol.setAttribute("onmouseover","mouseOver()");
+    document.body.appendChild(newPol);
+        movePols();
+}
+
+$(".title").click(function(){
     clearInterval(inst);
+    score=0;
+     gameOver=false;
      $(".title").hide();
-     movePols();
+     $("#egg").show();
+     addPol();
      moveMoney();
 });
+
+var delay=100, setTimeoutConst;
+$("#egg").hover(function(){
+    setTimeoutConst = setTimeout(function() {
+        moveMoney();
+        score += 1;
+        addPol();
+        console.log(score);
+      }, delay);
+    }, function() {
+      clearTimeout(setTimeoutConst);
+  });
+
+function mouseOver(){
+    gameOver=true;
+    $("#egg").hide();
+    $('.dirtyPol').remove();
+    document.getElementById("text").innerHTML = "You kept "+score+" dark monies out of the hands of diry politicians!";
+    document.getElementById("click").innerHTML = "Click here to play again";
+    $(".title").show();
+};
