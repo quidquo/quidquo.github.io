@@ -92,7 +92,6 @@ $("#egg").hover(function(){
         moveMoney();
         score += 1;
         addPol();
-        console.log(score);
       }, delay);
     }, function() {
       clearTimeout(setTimeoutConst);
