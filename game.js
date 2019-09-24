@@ -13,6 +13,30 @@ var text =["Quidquo.org originally had a spotlight feature.", "My wife didn't li
 var counter = 0;
 var elem = document.getElementById("text");
 var inst = setInterval(change, 3500);
+var clockMaker;
+
+function timer() {
+var minutesLabel = document.getElementById("minutes");
+var secondsLabel = document.getElementById("seconds");
+var totalSeconds = 0;
+clockMaker = setInterval(setTime, 1000);
+
+
+function setTime() {
+  ++totalSeconds;
+  secondsLabel.innerHTML = pad(totalSeconds % 60);
+  minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+}
+
+function pad(val) {
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
+}
+}
 
 function change() {
     elem.innerHTML = text[counter];
@@ -77,13 +101,19 @@ function addPol(){
 }
 
 $(".title").click(function(){
+    document.getElementById("minutes").innerHTML = "00";
+    document.getElementById("seconds").innerHTML = "00";
     clearInterval(inst);
     score=0;
+    document.getElementById("scoreboard").innerHTML = score;
      gameOver=false;
      $(".title").hide();
      $("#egg").show();
+     $("#scoreboard").show();
+     $("#timer").show();
      addPol();
      moveMoney();
+     timer();
 });
 
 var delay=100, setTimeoutConst;
@@ -91,6 +121,7 @@ $("#egg").hover(function(){
     setTimeoutConst = setTimeout(function() {
         moveMoney();
         score += 1;
+        document.getElementById("scoreboard").innerHTML = score;
         addPol();
       }, delay);
     }, function() {
@@ -101,6 +132,7 @@ function mouseOver(){
     gameOver=true;
     $("#egg").hide();
     $('.dirtyPol').remove();
+    clearInterval(clockMaker);
     document.getElementById("text").innerHTML = "You kept "+score+" dark monies out of the hands of diry politicians!";
     document.getElementById("click").innerHTML = "Click here to play again";
     $(".title").show();

@@ -2,6 +2,21 @@ body{
     background-color: #f2f2f2;
 }
 
+#timer{
+    position: relative;
+    float: right;
+    color: blue;
+    font-size: 40pt;
+    display: none;
+  }
+
+#scoreboard{
+        position:relative;
+        color: blue;
+        font-size: 40pt;
+        display: none;
+    }
+
 .title{
     margin: 0;
     position: absolute;
