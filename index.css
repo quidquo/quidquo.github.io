@@ -53,11 +53,11 @@ ul li:hover{
   display: none;
 }
 
-#topTenComp{
+.topTen{
   margin-bottom: 0px;
 }
 
-#selectDesc{
+.selectDesc{
   margin-top: 0px;
   font-style: italic;
 }
@@ -82,6 +82,15 @@ ul li:hover{
 
 #entityInfo{
   display: none;
+}
+
+.candCom{
+  font-weight: bold;
+}
+
+.candCom:hover{
+  background-color: #f2f2f2;
+  cursor: pointer;
 }
 
 #lob{

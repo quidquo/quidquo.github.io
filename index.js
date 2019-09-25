@@ -40,6 +40,18 @@ var candidateCode = 0;
   nameList.prepend(caption);
 }
 
+function retrieveCandInfo (candidateCode, candidateName){
+  //clean up html search bar
+  document.getElementById("myInput").value = candidateName;
+  document.getElementById("oninput-box-output").innerHTML = "";
+  document.getElementById("individual").innerHTML = "";
+  document.getElementById("company").innerHTML = "";
+  document.getElementById("graphHead").innerHTML = candidateName+" Campaign Finance Graph";
+  //propogate graph
+  var q = document.getElementById("candidateInfo");
+  q.style.display = "block";
+  graphMaker(candidateName, candidateCode);
+  }
 
 //select candidate when clicked
 document.getElementById("oninput-box-output").addEventListener("click",function(e) {
@@ -48,18 +60,7 @@ document.getElementById("oninput-box-output").addEventListener("click",function(
     //update candidate name and code
     candidateCode = e.target.id;
      candidateName = e.target.textContent;
-    
-    //clean up html search bar
-    document.getElementById("myInput").value = candidateName;
-    document.getElementById("oninput-box-output").innerHTML = "";
-    document.getElementById("individual").innerHTML = "";
-    document.getElementById("company").innerHTML = "";
-    document.getElementById("graphHead").innerHTML = candidateName+" Campaign Finance Graph";
-    //propogate graph
-    var q = document.getElementById("candidateInfo");
-    q.style.display = "block";
-    graphMaker(candidateName, candidateCode);
-    
+     retrieveCandInfo(candidateCode, candidateName);
           }
       });
   
@@ -274,6 +275,8 @@ var data = JSON.parse(xhReqe.responseText);
     if (candidateTotals[j]) {
       var indList = document.getElementById("recipients");
         var entr = document.createElement('li');
+        entr.setAttribute("class", "candCom")
+        entr.setAttribute("id", candidateTotals[j][0]);
       entr.appendChild(document.createTextNode(candidateTotals[j][1]+ " $"+candidateTotals[j][2].toLocaleString('en', {maximumSignificantDigits : 2})));
       indList.appendChild(entr);
     }
@@ -353,6 +356,16 @@ document.getElementById("company").addEventListener("click",function(g) {
   }
       });
 
-
+//select candidate when clicked from candidate list below
+document.getElementById("recipients").addEventListener("click",function(h) {
+  if(h.target && h.target.nodeName == "LI") {  
+    
+    //update entity name and code
+    candidateCode = parseInt(h.target.id, 10);
+     candidateName = h.target.textContent.substr(0, h.target.textContent.indexOf(' $'));
+    retrieveCandInfo(candidateCode, candidateName);
+    window.location.hash = "#graphHead";
+  }
+      });
 
 
