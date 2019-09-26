@@ -102,6 +102,14 @@ ul li:hover{
   cursor: pointer;
 }
 
+.candCom{
+  font-style: italic;
+}
+.candCom:hover{
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
 #lob{
   margin-bottom: 0px;
 }
