@@ -84,11 +84,20 @@ ul li:hover{
   display: none;
 }
 
-.candCom{
+.Republican{
+  color: red;
   font-weight: bold;
 }
+.Republican:hover{
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
 
-.candCom:hover{
+.Democratic{
+  color: blue;
+  font-weight: bold;
+}
+.Democratic:hover{
   background-color: #f2f2f2;
   cursor: pointer;
 }

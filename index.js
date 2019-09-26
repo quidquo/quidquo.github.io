@@ -1,10 +1,16 @@
+var committee;
+
+function candList(num){
+  //Retrieve committee list data set and store it as an array of objects
+var xhReq = new XMLHttpRequest();
+xhReq.open("GET", "https://mydata.iowa.gov/resource/5dtu-swbk.json?"+num+"$limit=5000", false);
+xhReq.send(null);
+committee = JSON.parse(xhReq.responseText);
+}
+
 //Search the database for a candidate name
 function oninputFunct(query) {
-//Retrieve committee list data set and store it as an array of objects
-var xhReq = new XMLHttpRequest();
-xhReq.open("GET", "https://mydata.iowa.gov/resource/5dtu-swbk.json?$limit=5000", false);
-xhReq.send(null);
-var committee = JSON.parse(xhReq.responseText);
+candList("");
 
 //candidate selector variables
 var candidateName = "";
@@ -15,6 +21,7 @@ var candidateCode = 0;
   var y = [];
   var z = [];
   var office =[];
+  var party =[];
 
    
   //list those names under the input box
@@ -23,6 +30,7 @@ var candidateCode = 0;
     y.push(val.candidate_name.toUpperCase());
       z.push(val.committee_number);
       office.push(val.office_sought);
+      party.push(val.party);
   }
   });
   var nameList = document.getElementById("oninput-box-output");
@@ -30,6 +38,9 @@ var candidateCode = 0;
     if(x.length> 0 && document.getElementById("oninput-box-output").childElementCount < 5){
       var entry = document.createElement('li');
       entry.setAttribute("id", z[y.indexOf(ind)]);
+      if(party == "Democratic"||"Republican"){
+        entry.setAttribute("class", party[y.indexOf(ind)]);
+      }
       entry.appendChild(document.createTextNode(ind+", "+office[y.indexOf(ind)]));
       nameList.appendChild(entry);
   }
@@ -277,7 +288,19 @@ var data = JSON.parse(xhReqe.responseText);
         var entr = document.createElement('li');
         entr.setAttribute("class", "candCom")
         entr.setAttribute("id", candidateTotals[j][0]);
-      entr.appendChild(document.createTextNode(candidateTotals[j][1]+ " $"+candidateTotals[j][2].toLocaleString('en', {maximumSignificantDigits : 2})));
+        candList("committee_number="+candidateTotals[j][0]+"&");
+        var candName;
+        if (committee.length<1){
+          candName = candidateTotals[j][1];
+        }
+        else if (committee[0].candidate_name){
+          candName = committee[0].candidate_name;
+          entr.setAttribute("class", committee[0].party);
+        }
+        else{
+          candName = candidateTotals[j][1];
+        }
+      entr.appendChild(document.createTextNode(candName+ " $"+candidateTotals[j][2].toLocaleString('en', {maximumSignificantDigits : 2})));
       indList.appendChild(entr);
     }
   }
