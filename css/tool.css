@@ -1,0 +1,142 @@
+html body{
+  background-color: #f2f2f2;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+#slogan{
+  text-align: center;
+  line-height: 0px;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+
+.break{
+  background-color: black;
+  height: 2px;
+  width: 100%;
+}
+
+.white{
+  background-color: white;
+  width: 100%;
+  padding: 0px 0px 0px 15px;
+}
+
+h3{
+  margin: 5px 0px 10px 0px;
+}
+
+input{
+  width: 100%;
+}
+
+ul{
+  list-style: none;
+}
+
+ul li:hover{
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+#cap{
+  font-weight: bold;
+  background-color: white;
+  cursor: default;
+}
+
+#candidateInfo{
+  display: none;
+}
+
+.topTen{
+  margin-bottom: 0px;
+}
+
+.selectDesc{
+  margin-top: 0px;
+  font-style: italic;
+}
+
+.bad{
+  font-weight: normal;
+}
+
+.bad:hover{
+  background-color: white;
+  cursor: default;
+}
+
+.good{
+  font-weight: bold;
+}
+
+.good:hover{
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+#entityInfo{
+  display: none;
+}
+
+.Republican{
+  color: red;
+  font-weight: bold;
+}
+.Republican:hover{
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.Democratic{
+  color: blue;
+  font-weight: bold;
+}
+.Democratic:hover{
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.candCom{
+  font-style: italic;
+}
+.candCom:hover{
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+#lob{
+  margin-bottom: 0px;
+}
+
+h4{
+  padding: 0px 0px 0px 10px;
+  margin-top: 0px;
+}
+
+#egg{
+  color: #f2f2f2;
+  width: 70px;
+  position: absolute;
+  right: 25%;
+}
+
+#egg a{
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+#egg:hover{
+  color: darkgreen;
+}
+
+footer{
+  height: 100px;
+}
+
+svg > g > g:last-child { pointer-events: none };
