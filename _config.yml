@@ -17,7 +17,7 @@ description: >
 baseurl: "http://www.quidquo.org" # the subpath of your site, e.g. /blog/
 url: "http://www.quidquo.org" # the base hostname & protocol for your site
 cover: ""
-logo: "assets/logo.png"
+logo: "/assets/logo.png"
 
 # Build settings
 markdown: kramdown
