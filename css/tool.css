@@ -1,121 +1,121 @@
-.break{
+.page-content .break{
   background-color: black;
   height: 2px;
   width: 100%;
 }
 
-.white{
+.page-content .white{
   background-color: white;
   width: 100%;
   padding: 0px 0px 0px 15px;
 }
 
-h3{
+.page-content h3{
   margin: 5px 0px 10px 0px;
 }
 
-input{
+.page-content input{
   width: 100%;
 }
 
-ul{
+.page-content ul{
   list-style: none;
 }
 
-ul li:hover{
+.page-content ul li:hover{
   background-color: #f2f2f2;
   cursor: pointer;
 }
 
-#cap{
+.page-content #cap{
   font-weight: bold;
   background-color: white;
   cursor: default;
 }
 
-#candidateInfo{
+.page-content #candidateInfo{
   display: none;
 }
 
-.topTen{
+.page-content .topTen{
   margin-bottom: 0px;
 }
 
-.selectDesc{
+.page-content .selectDesc{
   margin-top: 0px;
   font-style: italic;
 }
 
-.bad{
+.page-content .bad{
   font-weight: normal;
 }
 
-.bad:hover{
+.page-content .bad:hover{
   background-color: white;
   cursor: default;
 }
 
-.good{
+.page-content .good{
   font-weight: bold;
 }
 
-.good:hover{
+.page-content .good:hover{
   background-color: #f2f2f2;
   cursor: pointer;
 }
 
-#entityInfo{
+.page-content #entityInfo{
   display: none;
 }
 
-.Republican{
+.page-content .Republican{
   color: red;
   font-weight: bold;
 }
-.Republican:hover{
+.page-content .Republican:hover{
   background-color: #f2f2f2;
   cursor: pointer;
 }
 
-.Democratic{
+.page-content .Democratic{
   color: blue;
   font-weight: bold;
 }
-.Democratic:hover{
+.page-content .Democratic:hover{
   background-color: #f2f2f2;
   cursor: pointer;
 }
 
-.candCom{
+.page-content .candCom{
   font-style: italic;
 }
-.candCom:hover{
+.page-content .candCom:hover{
   background-color: #f2f2f2;
   cursor: pointer;
 }
 
-#lob{
+.page-content #lob{
   margin-bottom: 0px;
 }
 
-h4{
+.page-content h4{
   padding: 0px 0px 0px 10px;
   margin-top: 0px;
 }
 
-#egg{
+.page-content #egg{
   color: #f2f2f2;
   width: 70px;
   position: absolute;
   right: 25%;
 }
 
-#egg a{
+.page-content #egg a{
   color: #fff;
   text-decoration: none;
 }
 
-#egg:hover{
+.page-content #egg:hover{
   color: darkgreen;
 }
 
