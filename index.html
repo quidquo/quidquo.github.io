@@ -1,122 +1,88 @@
-<!DOCTYPE html>
-<html lan="en">
-<head>
-    <title>QuidQuo</title>
-    <link rel="stylesheet" type="text/css" href="index.css"></link>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+---
+layout: default
+pagination: 
+  enabled: true
+---
+<div class="home">
 
-<body>
- <main>
-   <div class="container-fluid">
-     <div class="row">
-       <div class="col-sm-12">
- <h1>Quidquo</h1>
+<div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
+  <div class="scrim {% if site.cover %}has-cover{% endif %}">
+    <header class="site-header">
+      <h1 class="title">{{ site.title }}</h1>
+      {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+<ul class="post-list">
+  {% for post in paginator.posts %}
+  <li>
+    <h2>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div>
+      <div class="post-categories">
+      {% if post.categories.size > 0 %}in {% for cat in post.categories %}
+        {% if site.jekyll-archives %}
+        <a href="{{ site.baseurl }}/category/{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+        {% else %}
+        <a href="{{ site.baseurl }}/posts/#{{ cat }}">{{ cat | capitalize }}</a>{% if forloop.last == false %}, {% endif %}
+        {% endif %}
+      {% endfor %}{% endif %}
       </div>
-    </div>
-<div class="row">
-  <div class="col-sm-12">
-    <p id="slogan">Be the pro.</p>
-  </div>
-</div>
-      <div class="row">
-        <div class="col-sm-12">
-   <h2>Iowa Campaign Finance Search</h2>
-  </div>
-</div>
-  <div class="row">
-    <div class="col-sm-12">
-   <p>These tools display a breakdown of the amount of money contributed to a candidate and the amount a company or other entity has contributed to candidates. All data represents contributions as reported to the State of Iowa Ethics and Campaign Disclosure Board (IECD). It includes contributions to all active state and local candidates in Iowa who report to the IECD. It does not include contributions to federal level candidates (e.g., US Senators or US Representatives) as those contributions are reported to the Federal Election Commission. Data is most up to date after reporting deadlines for candidates and committees. See <a href="https://ethics.iowa.gov/reports/campaign-due-dates/campaign-reporting-deadlines" target="_blank">this listing of Iowa Ethics reporting deadlines for more information.</a></p>
-   </div>
-  </div>
-   <div class="break"></div>
-   <div class="white">
-   <div class="row">
-     <div class="col-sm-12">
-     <h3>Search for a Candidate</h3>
-    </div>
-  </div>
-                <div class="form-group">
-     <label for="candidate name">Candidate Name:</label>
-  <input type="search" id="myInput" oninput="oninputFunct(this.value)" onfocus="this.value=''" placeholder="Name..." name="search" accesskey="c" tabindex="1" type="search">
-  </input>
-</div>
+    </section>
+  </li>
+  {% if forloop.last == false %}
+  <hr>
+  {% endif %}
+  {% endfor %}
+</ul>
 
-  <div class="row">
-    <div class="col-sm-12">
-<ul id="oninput-box-output"></ul>
+<nav class="pagination" role="navigation">
+	<p>
+    {% if paginator.previous_page %}
+			{% if paginator.page == 2 %}
+			<a class="newer-posts" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+        </span>
+      </a>
+			{% else %}
+			<a class="newer-posts" href="{{ site.baseurl }}{{ paginator.next_page_path }}">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+			{% endif %}
+		{% else %}
+		<span class="fa-stack fa-lg">
+      <i class="fa fa-square fa-stack-2x"></i>
+      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+    </span>
+		{% endif %}
+		<span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+		{% if paginator.next_page %}
+		<a class="newer-posts" href="{{ site.baseurl }}{{ paginator.next_page_path }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square fa-stack-2x"></i>
+        <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+		{% else %}
+		<span class="fa-stack fa-lg">
+      <i class="fa fa-square fa-stack-2x"></i>
+      <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+    </span>
+		{% endif %}
+	</p>
+</nav>
+
 </div>
 </div>
- <div class="row">
-   <div class="col-sm-12">
-   <p>Click here to <a href="https://gis.legis.iowa.gov/FYL/index.html" target="_blank">find your legislator</a></p>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-12" id="candidateInfo">
- <div class="candidateGraph">
-     <h3 id="graphHead">Campaign Finance Graph</h3>
-     <figure id="piechart"></figure>
-   </div>
-   <div id="candidateCompanies">
-     <h3 class="topTen"> Top 10 Company and Other Entities Donors:</h3>
-     <p class="pad selectDesc">Companies in bold may be selected for more details below.</p>
-     <ol id="company">
-     </ol>
-   </div>
-   <div id="candidateDonors">
-     <h3> Top 5 Individual Donors:</h3>
-     <ol id="individual">
-     </ol>
-   </div>
-   </div>
-  </div>
-   <div class="break"></div>
-   <div class="row">
-     <div class="col-sm-12">
-     <h3>Search for a Company or Other Entity</h3>
-    </div>
-  </div>
-       <div class="form-group">
-     <label for="company/entity name">Company/Entity Name:</label>
-  <input type="search" id="myInputEnt" oninput="oninputEntFunct(this.value)" onfocus="this.value=''" placeholder="Name..." name="search" accesskey="c" tabindex="1" type="search">
-  </input>
-</div>
-<div class="row">
-  <div class="col-sm-12" id="listing">
-<ul id="oninput-box-output-ent"></ul>
-</div>
-</div>
-<div class="row">
-  <div class="col-sm-12">
-<div id="entityInfo">
- <div class="total">
-     <h3 id="graphHead">Total Amount Conntributed to Candidates:</h3>
-      <h4 id="sum"></h4>
-   </div>
-   <div id="recipList">
-     <h3 class="topTen"> Top 10 recipients</h3>
-     <p class="pad selectDesc">All entities may be clicked for more information above. Italicized entities below are not actively registered candidate committees.</p>
-     <ol id="recipients">
-     </ol>
-   </div>
-   <div id="Lobbying">
-     <h3 id="lob">What does money buy?</h3>
-     <h4>Find out what bills this entity lobbied for or against at this <a href="https://www.legis.iowa.gov/lobbyist/reports/declarations" target="_blank">lobbyist declarations page.</a></h4>
-   </div>
-   </div>
-  </div>
-</div>
-</div>
-   <div class="break"></div>
-<div class="row"><div class="col-sm-12">This page draws from publicly available information available at <a href="https://webapp.iecdb.iowa.gov/publicview/NewContributionSearch.aspx" target="_blank"> the IECD search page</a> and it's underlying data available at <a href="https://data.iowa.gov/Government/Iowa-Campaign-Contributions-Received/smfg-ds7h" target="_blank"> the State of Iowa data website.</a> It looks up candidates listed in this <a href="https://data.iowa.gov/Campaigns-Elections/Registered-Political-Candidates-Committees-and-Ent/5dtu-swbk/data" target="_blank">publicly available dataset of active campaigns</a>. It looks up Company/Entity information in a list at this <a href="https://data.iowa.gov/Campaigns-Elections/Other-State-Federal-Political-Action-Committees-Fi/t3k4-yym7" target="_blank">publicly available dataset</a> of State/Federal PACs filing in Iowa. This tool is intended for informational purposes only. This information is only as accurate as the underlying data.
-</div></div>
-<div id="egg"><a href="/game.html">Dark $$</a></a></div></div>
-</main>
-<script type="text/javascript" src="index.js"></script>
-</body>
-</html>
