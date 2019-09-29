@@ -14,7 +14,7 @@ email: "quidquo.org@gmail.com"
 description: >
   QuidQuo is committed to shining a cleansing light to restore ethics and integrity to politics.
 baseurl: 
-url: "http://quidquo.github.io/" # the base hostname & protocol for your site
+url: "http://quidquo.github.io" # the base hostname & protocol for your site
 cover: ""
 logo: "/assets/Logo.png"
 
