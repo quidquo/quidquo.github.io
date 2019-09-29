@@ -3,5 +3,6 @@ layout: post
 title:  "Test Post"
 date:   2019-09-29 19:30:59 -0500
 categories: test
+author: QuidQuo
 ---
 This is a test post to check pagination.
