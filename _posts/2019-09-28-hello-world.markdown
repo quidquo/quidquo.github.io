@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello World!"
-date:   2019-09-28 19:30:59 -0600
+date:   2019-09-28 12:30:59 -0600
 categories: Welcome
 author: QuidQuo
 ---
