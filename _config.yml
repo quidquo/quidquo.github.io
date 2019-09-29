@@ -13,7 +13,7 @@ subtitle: "Be the pro"
 email: "quidquo.org@gmail.com"
 description: >
   QuidQuo is committed to shining a cleansing light to restore ethics and integrity to politics.
-baseurl: ""
+baseurl: 
 url: "www.quidquo.org" # the base hostname & protocol for your site
 cover: ""
 logo: "/assets/Logo.png"
