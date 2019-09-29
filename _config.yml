@@ -17,7 +17,6 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://www.quidquo.org" # the base hostname & protocol for your site
 cover: ""
 logo: "/assets/Logo.png"
-future: true
 
 # Build settings
 markdown: kramdown
