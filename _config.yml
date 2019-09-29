@@ -1,6 +1,7 @@
 # External plugins
 # See http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html for making `jekyll archives` work.
 plugins:
+  - jekyll-archives # Sorry, not GitHub pages friendly!
   - jekyll-sitemap
   - jekyll-paginate-v2
 
@@ -11,9 +12,13 @@ exclude:
 title: QuidQuo
 subtitle: "Be the pro"
 email: "quidquo.org@gmail.com"
+name: QuidQuo
 description: >
   QuidQuo is committed to shining a cleansing light to restore ethics and integrity to politics.
-baseurl: 
+# Base URL of site (i.e. /blog). It should always start with a slash,
+# and never end with a slash. Set it to a blank value if hosting at the
+# root of your server.
+baseurl:  # the subpath of your site, e.g. /blog/
 url: "https://www.quidquo.org" # the base hostname & protocol for your site
 cover: ""
 logo: "/assets/Logo.png"
@@ -27,10 +32,18 @@ highlightjs_theme: "monokai-sublime"
 # https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
 pagination:
   enabled: true
-  collection: 'posts'
   per_page: 5
   permalink: "/page/:num/"
 
+# Archive settings (see https://github.com/jekyll/jekyll-archives/)
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
 
 # Disqus comments
 # disqus_shortname: bencentra
@@ -38,6 +51,13 @@ pagination:
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
 
+# Category descriptions (for archive pages)
+descriptions:
+  - cat: jekyll
+    desc: "Posts describing Jekyll setup techniques."
+
+  - cat: dummy
+    desc: "Just some placeholder posts, lorem ipsum and the rest."
 
 # Social icons and sharing options
 #
@@ -79,7 +99,3 @@ protocols:
     fb_image_type: "image/png"
 
     twitter_image: "/assets/logo.png"
-
-    os_repo: "https://github.com/bencentra/centrarium.com"
-    os_rcs_type: "git"
-    os_src: "git@github.com:bencentra/centrarium.com.git"
