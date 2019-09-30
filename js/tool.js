@@ -162,8 +162,10 @@ document.getElementById("oninput-box-output").addEventListener("click",function(
       }
     });
   
+    //display total contributed
+    document.getElementById("total").innerHTML=(candidateName+" has received a total of $"+(smallContributions+largeContributions+companyContributions+partyContributions).toLocaleString('en', {maximumSignificantDigits : 2}));
+
     //make a pie chart of values stored in smallContributions, largeContributions, companyContributions, and partyContributions
-  
     google.charts.load("current", { packages: ["corechart"] });
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
@@ -326,6 +328,14 @@ var xhReqe = new XMLHttpRequest();
 xhReqe.open("GET", "https://data.iowa.gov/resource/t3k4-yym7.json", false);
 xhReqe.send(null);
 var entCommittee = JSON.parse(xhReqe.responseText);
+
+var xhReqeq = new XMLHttpRequest();
+xhReqeq.open("GET", "https://data.iowa.gov/resource/5dtu-swbk.json?$limit=5000", false);
+xhReqeq.send(null);
+var otherCommittee = JSON.parse(xhReqeq.responseText);
+
+//combine lists
+Array.prototype.push.apply(entCommittee,otherCommittee);
 
 //candidate selector variables
   document.getElementById("oninput-box-output-ent").innerHTML ="";
