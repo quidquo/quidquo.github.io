@@ -207,7 +207,7 @@ document.getElementById("oninput-box-output").addEventListener("click",function(
     companyTotals.sort(Changer);
     //list top 10 companies
     var i;
-    for (i = 0; i < 70; i++) {
+    for (i = 0; i < 10; i++) {
       if (companyTotals[i]) {
         var compList = document.getElementById("company");
           var ent = document.createElement('li');
