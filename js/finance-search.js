@@ -57,7 +57,11 @@ function retrieveCandInfo (candidateCode, candidateName){
   document.getElementById("oninput-box-output").innerHTML = "";
   document.getElementById("individual").innerHTML = "";
   document.getElementById("company").innerHTML = "";
+  document.getElementById("IndExFor").innerHTML = "";
+  document.getElementById("IndExAgainst").innerHTML = "";
   document.getElementById("graphHead").innerHTML = candidateName+" Campaign Finance Graph";
+  document.getElementById("independent").style.display = "none";
+
   //propogate graph
   var q = document.getElementById("candidateInfo");
   q.style.display = "block";
@@ -75,7 +79,7 @@ document.getElementById("oninput-box-output").addEventListener("click",function(
           }
       });
   
-  function graphMaker(candidateName, candidateCode)
+function graphMaker(candidateName, candidateCode)
   {
     //variables for graph propogation
     var smallContributions = 0;
@@ -232,7 +236,42 @@ document.getElementById("oninput-box-output").addEventListener("click",function(
         indList.appendChild(entr);
       }
     }
-  }  
+    //filter the external file for just the selected candidate's data
+    var url="https://data.iowa.gov/api/id/8u5j-u74n.json?$query=select%20*%20search%20%27"+candidateName.split(",")[0]+"%27%20limit%20100&$$query_timeout_seconds=30";
+    var xhReq = new XMLHttpRequest();
+    xhReq.open("GET", url, false);
+    xhReq.send(null);
+    var indExFor = JSON.parse(xhReq.responseText);
+
+    if(indExFor.length>0){
+      var totalFor=0;
+      var totalAgainst=0;
+    indExFor.forEach(function(g){
+      if(g.against_candidate){
+        totalAgainst+=parseFloat(g.amount);
+        var indExAList = document.getElementById("IndExAgainst");
+        var indExAAdd = document.createElement('li');
+        var numA=parseFloat(g.amount).toLocaleString('en', {style: 'currency', currency: 'USD'});
+      indExAAdd.appendChild(document.createTextNode(g.organization_name + " "+numA));
+      indExAList.appendChild(indExAAdd);
+      }
+      else{
+      totalFor+=parseFloat(g.amount);
+      var indExList = document.getElementById("IndExFor");
+      var indExAdd = document.createElement('li');
+      var num=parseFloat(g.amount).toLocaleString('en', {style: 'currency', currency: 'USD'});
+    indExAdd.appendChild(document.createTextNode(g.organization_name + " "+num));
+    indExList.appendChild(indExAdd);
+      }
+    });
+    document.getElementById("IndExTotal").innerHTML="A total of "+parseFloat(totalFor).toLocaleString('en', {style: 'currency', currency: 'USD'})+" was spent in independent expenditures for this candidate.";
+    document.getElementById("IndExATotal").innerHTML="A total of "+parseFloat(totalAgainst).toLocaleString('en', {style: 'currency', currency: 'USD'})+" was spent in independent expenditures against this candidate.";
+    document.getElementById("independent").style.display = "block";
+  
+}
+
+
+}
 
   var entityCode = 0;
   var entityName = "";

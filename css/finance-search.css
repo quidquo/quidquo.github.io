@@ -64,6 +64,11 @@
   cursor: pointer;
 }
 
+.page-content #independent{
+  display: none;
+}
+
+
 .page-content #entityInfo{
   display: none;
 }
