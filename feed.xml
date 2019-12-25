@@ -4,18 +4,30 @@
     <title>QuidQuo</title>
     <description>QuidQuo is committed to shining a cleansing light to restore ethics and integrity to politics.
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 24 Dec 2019 16:47:09 -0600</pubDate>
-    <lastBuildDate>Tue, 24 Dec 2019 16:47:09 -0600</lastBuildDate>
+    <link>https://www.quidquo.org/</link>
+    <atom:link href="https://www.quidquo.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 25 Dec 2019 03:00:49 -0600</pubDate>
+    <lastBuildDate>Wed, 25 Dec 2019 03:00:49 -0600</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Strong Roots Award: Rob Sand</title>
+        <description>&lt;p&gt;It's holiday season, and that means it's time for some more good news. When you dig into campaign finances, it can sometimes be a downer, but there are bright spots,...</description>
+        <pubDate>Wed, 25 Dec 2019 01:20:59 -0600</pubDate>
+        <link>https://www.quidquo.org/strong%20roots/2019/12/25/strong-roots-rob-sand.html</link>
+        <guid isPermaLink="true">https://www.quidquo.org/strong%20roots/2019/12/25/strong-roots-rob-sand.html</guid>
+        
+        
+        <category>Strong Roots</category>
+        
+      </item>
     
       <item>
         <title>Iowa Farm Bureau: A Federal/State Shell Game</title>
         <description>&lt;p&gt;The Iowa Farm Bureau is the &lt;a href=&quot;https://www.quidquo.org/party/2019/10/05/party-contributions-part-2-copy.html&quot; target=&quot;_blank&quot;&gt;second largest company/entity contributor to Iowa Republican candidates&lt;/a&gt;. They have brought in over $2 million and given $730,000 to currently active, registered...</description>
         <pubDate>Mon, 23 Dec 2019 00:30:59 -0600</pubDate>
-        <link>http://localhost:4000/company/entity/2019/12/23/iowa-farm-bureau.html</link>
-        <guid isPermaLink="true">http://localhost:4000/company/entity/2019/12/23/iowa-farm-bureau.html</guid>
+        <link>https://www.quidquo.org/company/entity/2019/12/23/iowa-farm-bureau.html</link>
+        <guid isPermaLink="true">https://www.quidquo.org/company/entity/2019/12/23/iowa-farm-bureau.html</guid>
         
         
         <category>Company/Entity</category>
@@ -26,8 +38,8 @@
         <title>Taxes and Teslas: Associated General Contractors of Iowa</title>
         <description>&lt;p&gt;This category of posts will take a deeper look at contributions from companies and entities. I hope to point out what entities are lobbying for at the statehouse, which politicians...</description>
         <pubDate>Sat, 19 Oct 2019 01:30:59 -0500</pubDate>
-        <link>http://localhost:4000/company/entity/2019/10/19/associated-general-contractors.html</link>
-        <guid isPermaLink="true">http://localhost:4000/company/entity/2019/10/19/associated-general-contractors.html</guid>
+        <link>https://www.quidquo.org/company/entity/2019/10/19/associated-general-contractors.html</link>
+        <guid isPermaLink="true">https://www.quidquo.org/company/entity/2019/10/19/associated-general-contractors.html</guid>
         
         
         <category>Company/Entity</category>
@@ -38,8 +50,8 @@
         <title>Strong Roots Award: Zach Wahls</title>
         <description>&lt;p&gt;I talk a lot about things that I find outrageous -- large donations from companies, lobbyists drowning out the voice of the people at the statehouse, etc. But sometimes, I...</description>
         <pubDate>Sun, 13 Oct 2019 12:30:59 -0500</pubDate>
-        <link>http://localhost:4000/strong%20roots/2019/10/13/strong-roots-zach-wahls.html</link>
-        <guid isPermaLink="true">http://localhost:4000/strong%20roots/2019/10/13/strong-roots-zach-wahls.html</guid>
+        <link>https://www.quidquo.org/strong%20roots/2019/10/13/strong-roots-zach-wahls.html</link>
+        <guid isPermaLink="true">https://www.quidquo.org/strong%20roots/2019/10/13/strong-roots-zach-wahls.html</guid>
         
         
         <category>Strong Roots</category>
@@ -50,8 +62,8 @@
         <title>Becoming Governor: The Money behind the Iowa Candidates (UPDATED)</title>
         <description>&lt;div id=&quot;update&quot; style=&quot;background-color: #ebd3e0;&quot;&gt; &lt;h2&gt;10/24/19 Update&lt;/h2&gt; &lt;p&gt;This update adds details about independent expenditures made for or against candidates. These funds were not included in the original article because they were...</description>
         <pubDate>Wed, 09 Oct 2019 12:30:59 -0500</pubDate>
-        <link>http://localhost:4000/governor/2019/10/09/iowa-governors-race.html</link>
-        <guid isPermaLink="true">http://localhost:4000/governor/2019/10/09/iowa-governors-race.html</guid>
+        <link>https://www.quidquo.org/governor/2019/10/09/iowa-governors-race.html</link>
+        <guid isPermaLink="true">https://www.quidquo.org/governor/2019/10/09/iowa-governors-race.html</guid>
         
         
         <category>Governor</category>
@@ -62,8 +74,8 @@
         <title>Party Contributions Part 2</title>
         <description>&lt;p&gt;In my &lt;a href=&quot;https://www.quidquo.org/party/2019/10/03/party-contributions.html&quot; target=&quot;_blank&quot;&gt;last post&lt;/a&gt;, I reviewed contributions to the Iowa Democratic Party and the Republican Party of Iowa and found that both acted like bank accounts that re-distribute...</description>
         <pubDate>Sat, 05 Oct 2019 12:30:59 -0500</pubDate>
-        <link>http://localhost:4000/party/2019/10/05/party-contributions-part-2-copy.html</link>
-        <guid isPermaLink="true">http://localhost:4000/party/2019/10/05/party-contributions-part-2-copy.html</guid>
+        <link>https://www.quidquo.org/party/2019/10/05/party-contributions-part-2-copy.html</link>
+        <guid isPermaLink="true">https://www.quidquo.org/party/2019/10/05/party-contributions-part-2-copy.html</guid>
         
         
         <category>Party</category>
@@ -74,8 +86,8 @@
         <title>Party Contributions</title>
         <description>&lt;p&gt;I wanted to start off with an overall breakdown of contributions to the Iowa Republican and Democratic Parties. But first, I want to talk a bit about who I am...</description>
         <pubDate>Thu, 03 Oct 2019 12:30:59 -0500</pubDate>
-        <link>http://localhost:4000/party/2019/10/03/party-contributions.html</link>
-        <guid isPermaLink="true">http://localhost:4000/party/2019/10/03/party-contributions.html</guid>
+        <link>https://www.quidquo.org/party/2019/10/03/party-contributions.html</link>
+        <guid isPermaLink="true">https://www.quidquo.org/party/2019/10/03/party-contributions.html</guid>
         
         
         <category>Party</category>
@@ -86,8 +98,8 @@
         <title>The Campaign Finance Search Tool</title>
         <description>&lt;p&gt;QuidQuo.org features a &lt;a href=&quot;/tools/index.html&quot; target=&quot;_blank&quot;&gt;tool&lt;/a&gt; that will help you uncover how much money Iowa politicians have received, who they have received that money from, and which candidates Iowa companies...</description>
         <pubDate>Mon, 30 Sep 2019 12:30:59 -0500</pubDate>
-        <link>http://localhost:4000/welcome/2019/09/30/the-campaign-finance-search-tool.html</link>
-        <guid isPermaLink="true">http://localhost:4000/welcome/2019/09/30/the-campaign-finance-search-tool.html</guid>
+        <link>https://www.quidquo.org/welcome/2019/09/30/the-campaign-finance-search-tool.html</link>
+        <guid isPermaLink="true">https://www.quidquo.org/welcome/2019/09/30/the-campaign-finance-search-tool.html</guid>
         
         
         <category>Welcome</category>
@@ -98,8 +110,8 @@
         <title>Hello World!</title>
         <description>&lt;p&gt;Welcome to the QuidQuo.org blog, where I will highlight interesting Campaign Finance-related findings, like what companies and entities are lobbying for Iowa legislation and how much they have contributed to...</description>
         <pubDate>Sat, 28 Sep 2019 12:30:59 -0500</pubDate>
-        <link>http://localhost:4000/welcome/2019/09/28/hello-world.html</link>
-        <guid isPermaLink="true">http://localhost:4000/welcome/2019/09/28/hello-world.html</guid>
+        <link>https://www.quidquo.org/welcome/2019/09/28/hello-world.html</link>
+        <guid isPermaLink="true">https://www.quidquo.org/welcome/2019/09/28/hello-world.html</guid>
         
         
         <category>Welcome</category>
